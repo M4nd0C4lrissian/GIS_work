@@ -2,9 +2,17 @@
 
 This small library is meant to provide some straightforward code that allows us to quickly model the sub-divisions of focus for the competition, and allowing us to visualize these regions relative to various features of the space (roads, transit, nearby amenities, etc.).
 
+## Data
+
 I'm using open-source GeoPackage data provided by the Canadian Government (.gpkg) - can be found [here](https://www12.statcan.gc.ca/census-recensement/2011/geo/bound-limit/bound-limit-s-eng.cfm?year=25).
 
 Presumably the contest will provided similar data, at the very least we can expect something like a gpkg file, or that can be converted into one. Note that the tables below define this non-competition data that I've been playing around with, though this may not match the competition schema (likely won't), and is subject to change.
+
+## Examples
+
+NOTE: pathing may have to be changed for you Mac or Linux users (I didn't use `os.path.join`)
+
+Some examples can be found in `examples.py` and at the bottom of the two python files.
 
 ## Table 1.1 — Record layout: 2024 Census Subdivision Boundary File
 
@@ -61,18 +69,20 @@ I've made only two files. Both of them have some small runnable examples at the 
 
 2. `fetch_features_in_csds.py` 
 
-2.1. `fetch_features` 
-- this method is used to query the OverPass API, which is an open-source, publicly-managed and free compendium of GIS data. This is better than Google Maps if only because we don't need to spend money. 
+- 2.1. `fetch_features` 
+this method is used to query the OverPass API, which is an open-source, publicly-managed and free compendium of GIS data. This is better than Google Maps if only because we don't need to spend money. 
 
 In particular, we use `osmnx` to handle the API querying. We could do it manually, but this library handles some awkward parts. This library seems to have a lot of features, but its not the most popular and doesn't have the best error reporting, so I haven't used it much for anything beyond API querying. 
 
-We query features using key-value pairs (passed in as `map_feature_dict` in the code). All possible key-value pairs can be found [here](https://wiki.openstreetmap.org/wiki/Map_features). Note that not all of them will populate for every sub-division. I have some simple reporting on which features are found and which are not, and I recommend removing those that are not found to speed up API calls.
+We query features using key-value pairs (passed in as `map_feature_dict` in the code). All possible key-value pairs can be found [here](https://wiki.openstreetmap.org/wiki/Map_features). 
+
+Note that not all of them will populate for every sub-division. I have some simple reporting on which features are found and which are not, and I recommend removing those that are not found to speed up API calls.
 
 On that note, API calls can timeout, or just generally take a long time. I'm going to make some simple logic to save the query results and then add a function to merge two different query results so that we can minimize how much we call the API.
 
-2.2 `plot_features_over_geometry`
+- 2.2 `plot_features_over_geometry`
 
-Plotting logic - takes in the feature geometry returned by fetch_features, and some separate geometry that you want to overlay these features over, and plots both. Has some optional bells and whistles for nicer plotting, which can be found as comments in the code.
+Plotting logic - takes in the feature geometry returned by `fetch_features`, and some separate geometry that you want to overlay these features over, and plots both. Has some optional bells and whistles for nicer plotting, which can be found as comments in the code.
 
 
 

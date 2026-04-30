@@ -8,6 +8,8 @@ So, flow to try:
 
 Eamon TODO:
 
+BUG: features can have multiple geometry types, so I need to filter through them and plot each type separately but with the same color / legend
+
 - (DONE) make visualizer into general function - test that it works for multipolygon
 - write clearer README, underlining what each library is used for, note on CRS details, and on how we usee features
 - showing where to find features and some example scripts that generate some example graphs
