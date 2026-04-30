@@ -1,10 +1,11 @@
-from fetch_csd_polygon import and_over_or
+from fetch_csd import and_over_or
 
 import geopandas as gpd
 import osmnx as ox
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import matplotlib.patches as mpatches
+from shapely.ops import unary_union
 
 #Input
 #   gdf - a GeoDataFrame containing the polygons within which we search, with coordinates in a recognized CRS standard, which we conver to ESPG:4326 to work with OSMNX
@@ -12,15 +13,12 @@ import matplotlib.patches as mpatches
 #Returns: all the features found in each polygon present in gdf (still need to test if this works for multiple polygons)
 def fetch_features(gdf, map_feature_dict):
 
-    assert gdf.crs is not None
-
     #TODO - make it work for multi-polygon
-    #single for now
-    polygon = gdf['geometry'].iloc[0]
-    polygon = gpd.GeoDataFrame(geometry=[polygon], crs=gdf.crs).to_crs("EPSG:4326")
+    multi = unary_union(gdf['geometry'])
+    polygons = gpd.GeoDataFrame(geometry=[multi], crs=gdf.crs)
 
-    #returns a bunch of LineStrings
-    features = ox.features.features_from_polygon(polygon=polygon.iloc[0]['geometry'], tags=map_feature_dict)
+    #API call to extract features from our multipolygon - can timeout
+    features = ox.features.features_from_polygon(polygon=polygons['geometry'].iloc[0], tags=map_feature_dict)
 
     found_keys = []
     #will not necessarily find all feature types
@@ -32,14 +30,15 @@ def fetch_features(gdf, map_feature_dict):
                     print(f'Found at least one {key}:{val}')
                     found_keys.append((key, val))
 
-    return features, polygon, found_keys
+    return features, polygons, found_keys
 
 #Input
-#   gdf : the polygons to plot (need to test if this can be a gdf with multiple non-geometry columns, for now expects geometry)
+#   gdf : the polygons to plot
 #   features : features to plot (expecting geometry such as LineStrings) - will test with other feature types
 #   save_filepath : optional path where to save the graph, if not present, plot displayed and deleted
 #   color_norm_value : optional string representing the gdf column values to normalize polygon coloring according to some condition of the CSDs (i.e. %rental properties)
-def plot_features_over_geometry(gdf, features, feature_keys, save_filepath=None, color_norm_value=None):
+# NOTE: the gdf we plot does not need to be the gdf we searched features over - this is helpful, as we could pass in much more granular CSDs, while querying over the larger Toronto CSD for the API call
+def plot_features_over_geometry(gdf, features, feature_keys, save_filepath=None, color_norm_value=None, label_names=True):
             
     # looks like you need to make the fig and ax separately
     fig, ax = plt.subplots(figsize=(10, 10))
@@ -61,6 +60,19 @@ def plot_features_over_geometry(gdf, features, feature_keys, save_filepath=None,
         edgecolor='black',
         norm=norm
     )
+
+    if label_names:
+
+        for _, row in gdf.iterrows():
+            centroid = row['geometry'].centroid
+            ax.annotate(
+                text=row['CDNAME'],
+                xy=(centroid.x, centroid.y),
+                ha='center',
+                va='center',
+                fontsize=8,
+                color='black'
+            )
 
     #need each feature to have its own color and legend should reflect that
     feature_gdf_list = []
@@ -94,13 +106,15 @@ def plot_features_over_geometry(gdf, features, feature_keys, save_filepath=None,
 
 if __name__ == '__main__':
     #cities in Ontario
+    # gdf = and_over_or('.\GIS_work\data\lcsd000a25p_e.gpkg', feature_dict={'PRNAME' : ['Ontario'], 'CSDTYPE' : ['CTY', 'T']})
     gdf = and_over_or('.\GIS_work\data\lcsd000a25p_e.gpkg', feature_dict={'PRNAME' : ['Ontario'],
                                     'CDNAME' : ['Toronto']})
 
     # features we want to find
-    map_feature_dict = {'railway' : ['subway'], 'highway' : ['motorway', 'trunk', 'primary'], 'route' : ['bus']}
+    map_feature_dict = {'railway' : ['subway'], 'highway' : ['motorway', 'trunk', 'primary', 'bus_stop'], 'amenity' : ['bus_station'], 'cycleway' : ['lane'], 'public_transport' : ['stop_position'], 'route' : ['bus']}
+    # map_feature_dict = {'railway' : ['subway']}
 
-    features, polygon, feature_keys = fetch_features(gdf, map_feature_dict)
+    features, multi_polygon, feature_keys = fetch_features(gdf, map_feature_dict)
 
-    plot_features_over_geometry(polygon, features, feature_keys, save_filepath='.\GIS_work\graphs\\better_graph.png')
+    plot_features_over_geometry(gdf, features, feature_keys, save_filepath='.\GIS_work\graphs\\better_graph_with_bus.png')
 

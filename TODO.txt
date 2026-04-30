@@ -27,3 +27,6 @@ TODO:
 - make visualizer into general function - test that it works for multipolygon
 - write clearer README, underlining what each library is used for, note on CRS details, and on how we usee features
 - showing where to find features and some example scripts that generate some example graphs
+
+- Adding save feature to API call (osmnx may have that built in)
+- that means we also want functionality to merge multiple separate gdfs from different queries (and perhaps some standard way to )
