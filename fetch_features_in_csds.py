@@ -4,6 +4,7 @@ import geopandas as gpd
 import osmnx as ox
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
+import matplotlib.patches as mpatches
 
 #Input
 #   gdf - a GeoDataFrame containing the polygons within which we search, with coordinates in a recognized CRS standard, which we conver to ESPG:4326 to work with OSMNX
@@ -21,14 +22,24 @@ def fetch_features(gdf, map_feature_dict):
     #returns a bunch of LineStrings
     features = ox.features.features_from_polygon(polygon=polygon.iloc[0]['geometry'], tags=map_feature_dict)
 
-    return features, polygon
+    found_keys = []
+    #will not necessarily find all feature types
+    for key, vals in map_feature_dict.items():
+
+        if key in features.columns:
+            for val in vals:
+                if val in features[key].unique():
+                    print(f'Found at least one {key}:{val}')
+                    found_keys.append((key, val))
+
+    return features, polygon, found_keys
 
 #Input
 #   gdf : the polygons to plot (need to test if this can be a gdf with multiple non-geometry columns, for now expects geometry)
 #   features : features to plot (expecting geometry such as LineStrings) - will test with other feature types
 #   save_filepath : optional path where to save the graph, if not present, plot displayed and deleted
 #   color_norm_value : optional string representing the gdf column values to normalize polygon coloring according to some condition of the CSDs (i.e. %rental properties)
-def plot_features_over_geometry(gdf, features, save_filepath=None, color_norm_value=None):
+def plot_features_over_geometry(gdf, features, feature_keys, save_filepath=None, color_norm_value=None):
             
     # looks like you need to make the fig and ax separately
     fig, ax = plt.subplots(figsize=(10, 10))
@@ -51,7 +62,31 @@ def plot_features_over_geometry(gdf, features, save_filepath=None, color_norm_va
         norm=norm
     )
 
-    features.plot(ax=ax, color='blue', linewidth=0.5)
+    #need each feature to have its own color and legend should reflect that
+    feature_gdf_list = []
+    labels = []
+
+    for tup in feature_keys:
+        # filter for only the high-level feature type
+        temp_f = features.dropna(subset=[tup[0]])
+        # then filter for low-level feature type
+        feature_gdf_list.append(temp_f[temp_f[tup[0]] == tup[1]])
+        labels.append(tup[1])
+
+    # generate N distinct colors, excluding reds
+    colors = plt.cm.tab10.colors  # 10 distinct colors, none are red
+
+    legend_handles = []
+
+    for i, (feature_gdf, label) in enumerate(zip(feature_gdf_list, labels)):
+        color = colors[i % len(colors)]
+        feature_gdf.plot(ax=ax, color=color, linewidth=0.5)
+        legend_handles.append(mpatches.Patch(color=color, label=label))
+
+    ax.legend(handles=legend_handles, loc='upper right')
+
+    # features.plot(ax=ax, color='blue', linewidth=0.5)
+
     if save_filepath:
         plt.savefig(save_filepath)
     else:
@@ -63,9 +98,9 @@ if __name__ == '__main__':
                                     'CDNAME' : ['Toronto']})
 
     # features we want to find
-    map_feature_dict = {'railway' : ['subway']}
+    map_feature_dict = {'railway' : ['subway'], 'highway' : ['motorway', 'trunk', 'primary'], 'route' : ['bus']}
 
-    features, polygon = fetch_features(gdf, map_feature_dict)
+    features, polygon, feature_keys = fetch_features(gdf, map_feature_dict)
 
-    plot_features_over_geometry(polygon, features, save_filepath='.\GIS_work\graphs\graph.png')
+    plot_features_over_geometry(polygon, features, feature_keys, save_filepath='.\GIS_work\graphs\\better_graph.png')
 
