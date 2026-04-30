@@ -1,19 +1,3 @@
-1. Make a general request api that cycles through the mirrors in case one fails
-2. it should allow amenities (we should have some kind of dictionary of allowable amenity types)
-3. need to understand how these entities are returned and the best way to extract summaries on them
-4. connect this with our CSD data (function that pulls the polygon defining the CSD, extracts coordinates and allows filtering of amenities present)
-    4.1 CSD has polygons to closely define shape of sub-divisions, can we extract the general bounding box for easier lookups
-    4.2 looks like OSMNX allows for use of polygon as input to query
-
-
-Can use OSMNX as it already has many services 
-Does OpenStreetMap have political boundary information? (could be cool to see if rental neighborhoods are politically solitary or mixed with owners)
-
-What do we want:
-
-- easily model and visualize the census data relative to other GIS data that we pull (proximity to things)
-
-
 Target flow:
 So, flow to try:
 
@@ -22,11 +6,16 @@ So, flow to try:
 - (DONE) we place them all on a map using (just used matplotlib and geopandas)
 - (DONE) visualize, with coloring tools for metadata (we want to be able to see %renter-owned in a color, or average income, etc)
 
-TODO:
+Eamon TODO:
 
-- make visualizer into general function - test that it works for multipolygon
+- (DONE) make visualizer into general function - test that it works for multipolygon
 - write clearer README, underlining what each library is used for, note on CRS details, and on how we usee features
 - showing where to find features and some example scripts that generate some example graphs
 
 - Adding save feature to API call (osmnx may have that built in)
-- that means we also want functionality to merge multiple separate gdfs from different queries (and perhaps some standard way to )
+- that means we also want functionality to merge multiple separate gdfs from different queries (and perhaps some standard way to name / save these files for clarity)
+- I also want to check OSMNX for travel time information into the downtown cores (randomly sample in some radius from random points sampled in each sub-division, calculate travel times via roads)
+- then I can adjust these values according to 1-2 buses for different areas, and see how much time its taking people in different communities to get downtown 
+
+- could be cool if there were political (like MP leaning?) for every region info 
+    - or whatever the provincial equivalent of an MP is (I'm uneducated)
