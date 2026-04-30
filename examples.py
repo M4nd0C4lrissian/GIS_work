@@ -21,5 +21,4 @@ if __name__ == '__main__':
     plot_features_over_geometry(gdf_toronto_hamilton, feat2, keys2, save_filepath='.\GIS_work\graphs\\example_2.png')
 
     plot_features_over_geometry(gdf_toronto, feat3, keys3, save_filepath='.\GIS_work\graphs\\example_3.png')
-    #TODO: fix bug when multiple geometry types returned for the same map feature
-    # plot_features_over_geometry(gdf_toronto_hamilton, feat4, keys4, save_filepath='.\GIS_work\graphs\\example_4.png')
+    plot_features_over_geometry(gdf_toronto_hamilton, feat4, keys4, save_filepath='.\GIS_work\graphs\\example_4.png')
