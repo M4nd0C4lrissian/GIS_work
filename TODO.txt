@@ -17,7 +17,13 @@ What do we want:
 Target flow:
 So, flow to try:
 
-- extracting the geometries of a set of sub-divisions (say all of them in Toronto) - straight from our local data
-- with this set of polygons (might have to make them a multipolygon), we look for their public transit and subway stations
-- we place them all on a map using OSMNX
-- visualize, with coloring tools for metadata (we want to be able to see %renter-owned in a color, or average income, etc)
+- (DONE) extracting the geometries of a set of sub-divisions (say all of them in Toronto) - straight from our local data
+- (DONE) with this set of polygons (might have to make them a multipolygon), we look for their public transit and subway stations
+- (DONE) we place them all on a map using (just used matplotlib and geopandas)
+- (DONE) visualize, with coloring tools for metadata (we want to be able to see %renter-owned in a color, or average income, etc)
+
+TODO:
+
+- make visualizer into general function - test that it works for multipolygon
+- write clearer README, underlining what each library is used for, note on CRS details, and on how we usee features
+- showing where to find features and some example scripts that generate some example graphs
