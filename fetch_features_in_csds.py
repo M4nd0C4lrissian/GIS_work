@@ -77,24 +77,28 @@ def plot_features_over_geometry(gdf, features, feature_keys, save_filepath=None,
 
     #need each feature to have its own color and legend should reflect that
     feature_gdf_list = []
-    labels = []
+    legend_handles = []
+    #generate N distinct colors based on number of unique feature keys
+    colors = plt.cm.tab10.colors
+    color_map = {tup: colors[i % len(colors)] for i, tup in enumerate(feature_keys)}
 
     for tup in feature_keys:
+        color = color_map[tup]
+
         # filter for only the high-level feature type
         temp_f = features.dropna(subset=[tup[0]])
         # then filter for low-level feature type
-        feature_gdf_list.append(temp_f[temp_f[tup[0]] == tup[1]])
-        labels.append(tup[1])
+        temp_f = temp_f[temp_f[tup[0]] == tup[1]]
 
-    # generate N distinct colors, excluding reds
-    colors = plt.cm.tab10.colors  # 10 distinct colors, none are red
+        # add one legend handle per feature_key (not per geometry type)
+        legend_handles.append(mpatches.Patch(color=color, label=tup[1]))
 
-    legend_handles = []
+        # then we further filter through unique geometries
+        for g in temp_f.geometry.geom_type.unique():
+            feature_gdf_list.append((temp_f[temp_f.geometry.geom_type == g], color))
 
-    for i, (feature_gdf, label) in enumerate(zip(feature_gdf_list, labels)):
-        color = colors[i % len(colors)]
+    for feature_gdf, color in feature_gdf_list:
         feature_gdf.plot(ax=ax, color=color, linewidth=0.5)
-        legend_handles.append(mpatches.Patch(color=color, label=label))
 
     ax.legend(handles=legend_handles, loc='upper right')
 
