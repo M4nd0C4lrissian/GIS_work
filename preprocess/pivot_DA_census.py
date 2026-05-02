@@ -1,5 +1,5 @@
 import pandas as pd
-from constants import COI
+from util.constants import COI
 from util.pathing import path_exists
 
 # this function pulls the full census for a province, and filters for the characteristics of interest (COI) at the Dissemination Area (DA) level

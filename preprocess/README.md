@@ -24,4 +24,16 @@ Please rename it to: `GIS_work\data\2021_geographic_attribute_file.csv`
 
 ## Usage
 
-After doing the above, all you need to specify is which census data you actually care about - 
+After doing the above, all you need to specify is which census data you actually care about.
+
+For this, look at `util/constants.py` which includes a value called Characteristics of Interest (COI). 
+
+Everything is pre-configured to use these characteristic IDs to filter the census data. I made it a constant so that we don't hawe to re-check every time what the IDs should be (its a bit tedious).
+
+Feel free to modify this value, but note that I've added constants.py to the `.gitignore`, so your IDs will only be locally saved.
+
+*IMPORTANT*: to find the census data you want, and their associated IDs, check [here](https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&SearchText=24662285&DGUIDlist=2021S051224662285&GENDERlist=1,2,3&STATISTIClist=1,4&HEADERlist=0)
+
+It's an example search result for a specific DA, and you can see all of the info available (you can filter it with the 'Add or remove data' section.)
+
+To find the associated IDs of the features you want to work with, look at the file `GIS_work\data\DA Data\queryable_characteristics.csv`. You can CTRL + F the names as you see them on the website, and find the ID.
