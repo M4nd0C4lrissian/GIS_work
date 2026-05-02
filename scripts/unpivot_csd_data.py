@@ -2,122 +2,86 @@ import pandas as pd
 import duckdb as ddb
 import numpy as np
 
-df = pd.read_csv(
-    "data/Mtl_Tor_Edm_Van_CSDs_Natasha.csv",
-    encoding='latin-1',
-    header=[4, 5],
-    skiprows=[0, 1, 2, 3]
-)
+file_path = "data/Mtl_Tor_Edm_Van_CSDs_Natasha.csv"
 
-new_columns = []
-for col in df.columns:
-    if isinstance(col, tuple):
-        level0, level1 = col
-        if level1 and level1 != '':
-            new_columns.append(level1)
-        else:
-            new_columns.append(level0)
-    else:
-        new_columns.append(col)
+# ---------------------------------------------------------
+# 1. READ ONCE & ENFORCE SCHEMA
+# ---------------------------------------------------------
+tenures = ['Total', 'Owner', 'Renter']
+metrics = ['population', 'income', 'stir']
 
-df.columns = new_columns
+# Generates: ['geography', 'immigrant_status', 'Total_population', 'Total_income', ...]
+col_names = ['geography', 'immigrant_status'] + [
+    f"{t}_{m}" for t in tenures for m in metrics
+]
 
-df_raw = pd.read_csv(
-    "data/Mtl_Tor_Edm_Van_CSDs_Natasha.csv",
-    encoding='latin-1',
-    skiprows=4,
-    header=0
-)
+df = pd.read_csv(file_path, encoding='latin-1', skiprows=6, names=col_names)
 
-df_data = pd.read_csv(
-    "data/Mtl_Tor_Edm_Van_CSDs_Natasha.csv",
-    encoding='latin-1',
-    skiprows=5,
-    header=0
-)
+# ---------------------------------------------------------
+# 2. EXTRACT CITY & SUBDIVISION
+# ---------------------------------------------------------
+df['geography'] = df['geography'].str.strip()
+is_cma = df['geography'].str.contains('(CMA)', regex=False)
 
-base_cols = ['geography', 'immigrant_status']
-tenure_metrics = ['population', 'income', 'stir']
+df['city'] = np.where(is_cma, df['geography'], np.nan)
+df['city'] = df['city'].ffill().str.extract(r'^\s*([^\(]+)').squeeze().str.strip()
+df['subdivision'] = df['geography'].str.extract(r'^\s*([^\(]+)').squeeze().str.strip()
 
-column_names = base_cols.copy()
-tenure_list = ['Total', 'Owner', 'Renter']
-for tenure in tenure_list:
-    for metric in tenure_metrics:
-        column_names.append(f"{tenure}_{metric}")
+# Filter out aggregates
+df = df[~is_cma & ~df['geography'].str.contains('Canada', regex=False)]
 
-df_data.columns = column_names
+# ---------------------------------------------------------
+# 3. THE MAGIC UNPIVOT (Replacing the For-Loop)
+# ---------------------------------------------------------
+# Isolate the columns that identify the row
+index_cols = ['city', 'subdivision', 'geography', 'immigrant_status']
+df = df.set_index(index_cols)
 
-df_data['geography'] = df_data['geography'].str.strip()
+# We turn the 9 flat metric columns into a MultiIndex (Level 1: Tenure, Level 2: Metric)
+df.columns = pd.MultiIndex.from_product([tenures, metrics], names=['tenure', 'metric'])
 
-# --- NEW: Extract city and subdivision ---
-is_cma = df_data['geography'].str.contains('(CMA)', regex=False)
+# .stack() pushes the 'tenure' level from the columns down into the rows.
+# It automatically leaves population, income, and stir as columns!
+df_unpivoted = df.stack(level='tenure').reset_index()
 
-df_data['city'] = np.where(is_cma, df_data['geography'], np.nan)
-df_data['city'] = df_data['city'].ffill()
-df_data['city'] = df_data['city'].str.extract(r'^\s*([^\(]+)').squeeze().str.strip()
-
-df_data['subdivision'] = df_data['geography'].str.extract(r'^\s*([^\(]+)').squeeze().str.strip()
-
-# Filter out CMA aggregates and Canada rows to keep only subdivisions
-df_data = df_data[~is_cma & ~df_data['geography'].str.contains('Canada', regex=False)]
-# -----------------------------------------
-
-dfs_long = []
-for tenure in tenure_list:
-    pop_col = f"{tenure}_population"
-    inc_col = f"{tenure}_income"
-    stir_col = f"{tenure}_stir"
-    
-    # Include new columns in the subset
-    df_subset = df_data[['city', 'subdivision', 'geography', 'immigrant_status', pop_col, inc_col, stir_col]].copy()
-    df_subset = df_subset.rename(columns={
-        pop_col: 'population',
-        inc_col: 'income',
-        stir_col: 'stir'
-    })
-    df_subset['tenure'] = tenure
-    dfs_long.append(df_subset)
-
-df_unpivoted = pd.concat(dfs_long, ignore_index=True)
-
-# Reorder columns with city and subdivision
-df_unpivoted = df_unpivoted[['city', 'subdivision', 'geography', 'immigrant_status', 'tenure', 'population', 'income', 'stir']]
-
-df_unpivoted = df_unpivoted.sort_values(['city', 'subdivision', 'immigrant_status', 'tenure']).reset_index(drop=True)
-
-# Clean up immigrant_status labels
-df_unpivoted['immigrant_status'] = df_unpivoted['immigrant_status'].str.strip()
-df_unpivoted['immigrant_status'] = df_unpivoted['immigrant_status'].replace({
+# ---------------------------------------------------------
+# 4. CLEAN UP & TYPE CONVERSION
+# ---------------------------------------------------------
+df_unpivoted['immigrant_status'] = df_unpivoted['immigrant_status'].str.strip().replace({
     'Non-immigrants': 'Non-immigrant',
     'Total Immigrant Status': 'Both'
 })
 
-# Replace non-numeric values with NaN for metrics
-for col in ['population', 'income', 'stir']:
+for col in metrics:
     df_unpivoted[col] = pd.to_numeric(df_unpivoted[col], errors='coerce')
 
+df_unpivoted = df_unpivoted.sort_values(
+    ['city', 'subdivision', 'immigrant_status', 'tenure']
+).reset_index(drop=True)
+
+# ---------------------------------------------------------
+# 5. DATABASE EXPORT
+# ---------------------------------------------------------
 print(f"Unpivoted shape: {df_unpivoted.shape}")
-print(f"\nFirst 10 rows:")
-print(df_unpivoted.head(10).to_string())
+print(f"\nFirst 5 rows:\n{df_unpivoted.head(5).to_string()}")
 print(f"\nUnique cities: {df_unpivoted['city'].nunique()}")
 print(f"Unique subdivisions: {df_unpivoted['subdivision'].nunique()}")
-print(f"Unique tenures: {df_unpivoted['tenure'].unique()}")
 
-con = ddb.connect("data/csd_unpivoted.duckdb")
-con.execute("DROP TABLE IF EXISTS csd_housing_data")
-con.execute("CREATE TABLE csd_housing_data AS SELECT * FROM df_unpivoted")
+# Use a context manager (with) to ensure the database connection closes safely
+with ddb.connect("data/csd_unpivoted_new.duckdb") as con:
+    con.execute("DROP TABLE IF EXISTS csd_housing_data")
+    con.execute("CREATE TABLE csd_housing_data AS SELECT * FROM df_unpivoted")
+    
+    row_count = con.execute("SELECT COUNT(*) FROM csd_housing_data").fetchone()[0]
+    print(f"\nSaved to DuckDB: {row_count} rows in csd_housing_data table")
+    
+    print(f"\nSample by tenure:")
+    sample = con.execute("""
+        SELECT tenure, COUNT(*) as count
+        FROM csd_housing_data 
+        GROUP BY tenure
+        ORDER BY tenure
+    """).fetchdf()
+    print(sample.to_string(index=False))
 
-result = con.execute("SELECT COUNT(*) as row_count FROM csd_housing_data").fetchone()
-print(f"\nSaved to DuckDB: {result[0]} rows in csd_housing_data table")
-
-print(f"\nSample by tenure:")
-sample = con.execute("""
-    SELECT tenure, COUNT(*) as count
-    FROM csd_housing_data 
-    GROUP BY tenure
-    ORDER BY tenure
-""").fetchdf()
-print(sample.to_string(index=False))
-
-con.close()
-print("\nDone! File saved to: data/csd_unpivoted.duckdb")
+print("\nDone! File saved to: data/csd_unpivoted_new.duckdb")
