@@ -39,4 +39,4 @@ def assert_databases_identical(db_path1, db_path2):
         con.close()
 
 # Usage
-assert_databases_identical('data/csd_unpivoted_new.duckdb', 'data/csd_unpivoted_old.duckdb')
+assert_databases_identical('data/csd_housing_new.duckdb', 'data/csd_housing_old.duckdb')

@@ -1,6 +1,7 @@
 import pandas as pd
 import duckdb as ddb
 import numpy as np
+import unicodedata
 
 file_path = "data/Mtl_Tor_Edm_Van_CSDs_Natasha.csv"
 
@@ -20,15 +21,25 @@ df = pd.read_csv(file_path, encoding='latin-1', skiprows=6, names=col_names)
 # ---------------------------------------------------------
 # 2. EXTRACT CITY & SUBDIVISION
 # ---------------------------------------------------------
-df['geography'] = df['geography'].str.strip()
+def remove_diacritics(text):
+    if pd.isna(text):
+        return text
+    return ''.join(c for c in unicodedata.normalize('NFD', str(text))
+                   if unicodedata.category(c) != 'Mn')
+
+df['geography'] = df['geography'].str.strip().apply(remove_diacritics)
 is_cma = df['geography'].str.contains('(CMA)', regex=False)
 
 df['city'] = np.where(is_cma, df['geography'], np.nan)
 df['city'] = df['city'].ffill().str.extract(r'^\s*([^\(]+)').squeeze().str.strip()
 df['subdivision'] = df['geography'].str.extract(r'^\s*([^\(]+)').squeeze().str.strip()
 
+# Handle Canada row
+is_canada = df['geography'].str.contains('Canada', regex=False)
+df.loc[is_canada, ['city', 'subdivision']] = np.nan
+
 # Filter out aggregates
-df = df[~is_cma & ~df['geography'].str.contains('Canada', regex=False)]
+df = df[~is_cma]
 
 # ---------------------------------------------------------
 # 3. THE MAGIC UNPIVOT (Replacing the For-Loop)
@@ -67,21 +78,20 @@ print(f"\nFirst 5 rows:\n{df_unpivoted.head(5).to_string()}")
 print(f"\nUnique cities: {df_unpivoted['city'].nunique()}")
 print(f"Unique subdivisions: {df_unpivoted['subdivision'].nunique()}")
 
-# Use a context manager (with) to ensure the database connection closes safely
-with ddb.connect("data/csd_unpivoted.duckdb") as con:
-    con.execute("DROP TABLE IF EXISTS csd_housing_data")
-    con.execute("CREATE TABLE csd_housing_data AS SELECT * FROM df_unpivoted")
+with ddb.connect("data/csd_housing.duckdb") as con:
+    con.execute("DROP TABLE IF EXISTS csd_housing_unpivoted")
+    con.execute("CREATE TABLE csd_housing_unpivoted AS SELECT * FROM df_unpivoted")
     
-    row_count = con.execute("SELECT COUNT(*) FROM csd_housing_data").fetchone()[0]
-    print(f"\nSaved to DuckDB: {row_count} rows in csd_housing_data table")
+    row_count = con.execute("SELECT COUNT(*) FROM csd_housing_unpivoted").fetchone()[0]
+    print(f"\nSaved to DuckDB: {row_count} rows in csd_housing_unpivoted table")
     
     print(f"\nSample by tenure:")
     sample = con.execute("""
         SELECT tenure, COUNT(*) as count
-        FROM csd_housing_data 
+        FROM csd_housing_unpivoted 
         GROUP BY tenure
         ORDER BY tenure
     """).fetchdf()
     print(sample.to_string(index=False))
 
-print("\nDone! File saved to: data/csd_unpivoted.duckdb")
+print("\nDone! File saved to: data/csd_housing.duckdb")

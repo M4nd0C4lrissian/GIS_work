@@ -3,7 +3,7 @@ import duckdb as ddb
 import math
 
 RAW_CSV = "data/Mtl_Tor_Edm_Van_CSDs_Natasha.csv"
-DB_FILE = "data/csd_unpivoted.duckdb"
+DB_FILE = "data/csd_housing.duckdb"
 
 def get_raw_csv_df():
     tenures = ['Total', 'Owner', 'Renter']
