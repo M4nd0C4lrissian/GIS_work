@@ -2,6 +2,36 @@
 
 This small library is meant to provide some straightforward code that allows us to quickly model the sub-divisions of focus for the competition, and allowing us to visualize these regions relative to various features of the space (roads, transit, nearby amenities, etc.).
 
+NOTE: for pathing in VSCODE, create a folder named `.vscode` at the same layer as this repo. It should have two files:
+
+1. `launch.json`:
+
+```
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Run Any File with src as Root",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/GIS_work"
+      }
+    }
+  ]
+}
+```
+
+2. `settings.json`:
+
+```
+{
+  "python.analysis.extraPaths": ["GIS_work"]
+}
+```
+
 ## Data
 
 I'm using open-source GeoPackage data provided by the Canadian Government (.gpkg) - can be found [here](https://www12.statcan.gc.ca/census-recensement/2011/geo/bound-limit/bound-limit-s-eng.cfm?year=25).

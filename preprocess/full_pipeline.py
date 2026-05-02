@@ -1,7 +1,7 @@
 from CSD_to_DA import map_das_to_csds
 from one_time import one_time
 from pivot_DA_census import filter_for_coi, pivot_census
-from constants import COI, PR_TO_ID_MAP
+from util.constants import COI, PR_TO_ID_MAP
 from util.pathing import is_empty_folder
 
 from pathlib import Path

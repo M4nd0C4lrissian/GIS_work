@@ -1,10 +1,8 @@
-from fetch_csd import and_over_or
+from csd_geometry.fetch_csd import and_over_or
+from plotting.plotting_overpass_features import plot_features_over_geometry
 
 import geopandas as gpd
 import osmnx as ox
-import matplotlib.pyplot as plt
-import matplotlib.colors as mcolors
-import matplotlib.patches as mpatches
 from shapely.ops import unary_union
 
 #Input

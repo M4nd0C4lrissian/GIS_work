@@ -1,5 +1,5 @@
 import pandas as pd
-from constants import PR_TO_ID_MAP
+from util.constants import PR_TO_ID_MAP
 
 #Input:
 #   pr - the string representation of the Province in question

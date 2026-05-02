@@ -1,11 +1,22 @@
-from fetch_csd  import and_over_or
-from fetch_features_in_csds import fetch_features, plot_features_over_geometry
+from csd_geometry.fetch_csd import and_over_or
+from api.fetch_features_in_csds import fetch_features
+from plotting.plotting_overpass_features import plot_features_over_geometry
+
+from pathlib import Path
+from util.pathing import is_empty_folder
 
 if __name__ == '__main__':
+    
+    Path("GIS_work/data/CSD Geometry Data").mkdir(parents=True, exist_ok=True)
+    
+    if is_empty_folder("GIS_work/data/CSD Geometry Data"):
+        raise RuntimeError("Need to download data files!")
+    
+    
     #load locally saved CSD info
-    gdf_toronto = and_over_or('.\GIS_work\data\lcsd000a25p_e.gpkg', feature_dict={'PRNAME' : ['Ontario'],
+    gdf_toronto = and_over_or('.\GIS_work\data\CSD Geometry Data\lcsd000a25p_e.gpkg', feature_dict={'PRNAME' : ['Ontario'],
                                     'CDNAME' : ['Toronto']})
-    gdf_toronto_hamilton = and_over_or('.\GIS_work\data\lcsd000a25p_e.gpkg', feature_dict={'PRNAME' : ['Ontario'],
+    gdf_toronto_hamilton = and_over_or('.\GIS_work\data\CSD Geometry Data\lcsd000a25p_e.gpkg', feature_dict={'PRNAME' : ['Ontario'],
                                     'CDNAME' : ['Toronto', 'Hamilton']})
     #see https://wiki.openstreetmap.org/wiki/Map_features
     transit_features = {'railway' : ['subway'], 'highway' : ['motorway', 'trunk', 'primary']}

@@ -1,3 +1,7 @@
+import matplotlib.pyplot as plt
+import matplotlib.colors as mcolors
+import matplotlib.patches as mpatches
+
 #Input
 #   gdf : the polygons to plot
 #   features : features to plot (expecting geometry such as LineStrings) - will test with other feature types
