@@ -7,7 +7,7 @@ file_path = "data/Mtl_Tor_Edm_Van_CSDs_Natasha.csv"
 # ---------------------------------------------------------
 # 1. READ ONCE & ENFORCE SCHEMA
 # ---------------------------------------------------------
-tenures = ['Total', 'Owner', 'Renter']
+tenures = ['Both', 'Owner', 'Renter']
 metrics = ['population', 'income', 'stir']
 
 # Generates: ['geography', 'immigrant_status', 'Total_population', 'Total_income', ...]
@@ -68,7 +68,7 @@ print(f"\nUnique cities: {df_unpivoted['city'].nunique()}")
 print(f"Unique subdivisions: {df_unpivoted['subdivision'].nunique()}")
 
 # Use a context manager (with) to ensure the database connection closes safely
-with ddb.connect("data/csd_unpivoted_new.duckdb") as con:
+with ddb.connect("data/csd_unpivoted.duckdb") as con:
     con.execute("DROP TABLE IF EXISTS csd_housing_data")
     con.execute("CREATE TABLE csd_housing_data AS SELECT * FROM df_unpivoted")
     
@@ -84,4 +84,4 @@ with ddb.connect("data/csd_unpivoted_new.duckdb") as con:
     """).fetchdf()
     print(sample.to_string(index=False))
 
-print("\nDone! File saved to: data/csd_unpivoted_new.duckdb")
+print("\nDone! File saved to: data/csd_unpivoted.duckdb")
