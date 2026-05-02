@@ -1,0 +1,1763 @@
+,CHARACTERISTIC_NAME,CHARACTERISTIC_ID
+0,"Population, 2021",1
+1,"Population, 2016",2
+2,"Population percentage change, 2016 to 2021",3
+3,Total private dwellings,4
+4,Private dwellings occupied by usual residents,5
+5,Population density per square kilometre,6
+6,Land area in square kilometres,7
+7,Total - Age groups of the population - 100% data,8
+8,  0 to 14 years,9
+9,    0 to 4 years,10
+10,    5 to 9 years,11
+11,    10 to 14 years,12
+12,  15 to 64 years,13
+13,    15 to 19 years,14
+14,    20 to 24 years,15
+15,    25 to 29 years,16
+16,    30 to 34 years,17
+17,    35 to 39 years,18
+18,    40 to 44 years,19
+19,    45 to 49 years,20
+20,    50 to 54 years,21
+21,    55 to 59 years,22
+22,    60 to 64 years,23
+23,  65 years and over,24
+24,    65 to 69 years,25
+25,    70 to 74 years,26
+26,    75 to 79 years,27
+27,    80 to 84 years,28
+28,    85 years and over,29
+29,      85 to 89 years,30
+30,      90 to 94 years,31
+31,      95 to 99 years,32
+32,      100 years and over,33
+33,Total - Distribution (%) of the population by broad age groups - 100% data,34
+34,Average age of the population,39
+35,Median age of the population,40
+36,Total - Occupied private dwellings by structural type of dwelling - 100% data,41
+37,  Single-detached house,42
+38,  Semi-detached house,43
+39,  Row house,44
+40,  Apartment or flat in a duplex,45
+41,  Apartment in a building that has fewer than five storeys,46
+42,  Apartment in a building that has five or more storeys,47
+43,  Other single-attached house,48
+44,  Movable dwelling,49
+45,Total - Private households by household size - 100% data,50
+46,  1 person,51
+47,  2 persons,52
+48,  3 persons,53
+49,  4 persons,54
+50,  5 or more persons,55
+51,Number of persons in private households,56
+52,Average household size,57
+53,Total - Marital status for the total population aged 15 years and over - 100% data,58
+54,  Married or living common-law,59
+55,    Married,60
+56,    Living common-law,61
+57,      Living common law - Never married,62
+58,      Living common law - Separated,63
+59,      Living common law - Divorced,64
+60,      Living common law - Widowed,65
+61,  Not married and not living common-law,66
+62,    Not married and not living common law - Never married,67
+63,    Not married and not living common law - Separated,68
+64,    Not married and not living common law - Divorced,69
+65,    Not married and not living common law - Widowed,70
+66,Total - Census families in private households by family size - 100% data,71
+67,Average size of census families,76
+68,Average number of children in census families with children,77
+69,Total number of census families in private households - 100% data,78
+70,  Total couple families,79
+71,    Married couples,80
+72,      With children,81
+73,      Without children,82
+74,    Common-law couples,83
+75,  Total one-parent families,86
+76,    in which the parent is a woman+,87
+77,    in which the parent is a man+,88
+78,Total - Persons in private households - 100% data,89
+79,  Total - Persons in census families,90
+80,    Married spouses or common-law partners,91
+81,    Parents in one-parent families,92
+82,    Children,93
+83,      In a two-parent family,94
+84,      In a one-parent family,95
+85,  Total - Persons not in census families in private households - 100% data,96
+86,    Living alone,97
+87,    Living with other relatives,98
+88,    Living with non-relatives only,99
+89,Total - Household type - 100% data,100
+90,  One-census-family households without additional persons,101
+91,    Couple-family households,102
+92,    One-parent-family households,105
+93,  Multigenerational households,106
+94,  Multiple-census-family households,107
+95,  One-census-family households with additional persons,108
+96,  Two-or-more-person non-census-family households ,109
+97,  One-person households,110
+98,Total - Income statistics in 2020 for the population aged 15 years and over in private households - 100% data,111
+99,  Number of total income recipients aged 15 years and over in private households in 2020 - 100% data,112
+100,    Median total income in 2020 among recipients ($),113
+101,  Number of after-tax income recipients aged 15 years and over in private households in 2020 - 100% data,114
+102,    Median after-tax income in 2020 among recipients ($),115
+103,  Number of market income recipients aged 15 years and over in private households in 2020 - 100% data,116
+104,    Median market income in 2020 among recipients ($),117
+105,  Number of employment income recipients aged 15 years and over in private households in 2020 - 100% data,118
+106,    Median employment income in 2020 among recipients ($),119
+107,  Number of government transfers recipients aged 15 years and over in private households in 2020 - 100% data,120
+108,    Median government transfers in 2020 among recipients ($),121
+109,  Number of employment insurance benefits recipients aged 15 years and over in private households in 2020 - 100% data,122
+110,    Median employment insurance benefits in 2020 among recipients ($),123
+111,  Number of COVID-19 emergency and recovery benefits recipients aged 15 years and over in private households in 2020 - 100% data,124
+112,    Median COVID-19 emergency and recovery benefits in 2020 among recipients ($),125
+113,Total - Income statistics in 2020 for the population aged 15 years and over in private households - 25% sample data,126
+114,  Number of total income recipients aged 15 years and over in private households in 2020 - 25% sample data,127
+115,    Average total income in 2020 among recipients ($),128
+116,  Number of after-tax income recipients aged 15 years and over in private households in 2020 - 25% sample data,129
+117,    Average after-tax income in 2020 among recipients ($),130
+118,  Number of market income recipients aged 15 years and over in private households in 2020 - 25% sample data,131
+119,    Average market income in 2020 among recipients ($),132
+120,  Number of employment income recipients aged 15 years and over in private households in 2020 - 25% sample data,133
+121,    Average employment income in 2020 among recipients ($),134
+122,  Number of government transfers recipients aged 15 years and over in private households in 2020 - 25% sample data,135
+123,    Average government transfers in 2020 among recipients ($),136
+124,  Number of employment insurance benefits recipients aged 15 years and over in private households in 2020 - 25% sample data,137
+125,    Average employment insurance benefits in 2020 among recipients ($),138
+126,  Number of COVID-19 emergency and recovery benefits recipients aged 15 years and over in private households in 2020 - 25% sample data,139
+127,    Average COVID-19 emergency and recovery benefits in 2020 among recipients ($),140
+128,Total - Employment income statistics in 2020 for the population aged 15 years and over in private households - 25% sample data,141
+129,  Number of employment income recipients in 2020 who worked full-year full-time in 2020 - 25% sample data,142
+130,    Median employment income in 2020 for full-year full-time workers in 2020 ($),143
+131,    Average employment income in 2020 for full-year full-time workers in 2020 ($),144
+132,  Number of employment income recipients in 2020 who worked part-year or part-time in 2020 - 25% sample data,145
+133,    Median employment income in 2020 of those who worked part-year or part-time in 2020 ($),146
+134,    Average employment income in 2020 of those who worked part-year or part-time in 2020 ($),147
+135,Composition of total income in 2020 of the population aged 15 years and over in private households (%) - 25% sample data,148
+136,  Market income (%),149
+137,    Employment income (%),150
+138,  Government transfers (%),151
+139,    Employment insurance benefits (%),152
+140,    COVID-19 - Government income support and benefits (%),153
+141,      COVID-19 - Emergency and recovery benefits (%),154
+142,Total - Total income groups in 2020 for the population aged 15 years and over in private households - 100% data,155
+143,  Without total income,156
+144,  With total income,157
+145,"    Under $10,000 (including loss)",158
+146,"    $10,000 to $19,999",159
+147,"    $20,000 to $29,999",160
+148,"    $30,000 to $39,999",161
+149,"    $40,000 to $49,999",162
+150,"    $50,000 to $59,999",163
+151,"    $60,000 to $69,999",164
+152,"    $70,000 to $79,999",165
+153,"    $80,000 to $89,999",166
+154,"    $90,000 to $99,999",167
+155,"    $100,000 and over",168
+156,"      $100,000 to $149,999",169
+157,"      $150,000 and over",170
+158,Total - After-tax income groups in 2020 for the population aged 15 years and over in private households - 100% data,171
+159,  Without after-tax income,172
+160,  With after-tax income,173
+161,"      $100,000 to $124,999",185
+162,"      $125,000 and over",186
+163,Total - Employment income groups in 2020 for the population aged 15 years and over in private households - 100% data,187
+164,  Without employment income,188
+165,  With employment income,189
+166,"    Under $5,000 (including loss)",190
+167,"    $5,000 to $9,999",191
+168,Total - Income statistics in 2019 for the population aged 15 years and over in private households - 100% data,204
+169,  Number of total income recipients aged 15 years and over in private households in 2019 - 100% data,205
+170,    Median total income in 2019 among recipients ($),206
+171,  Number of after-tax income recipients aged 15 years and over in private households in 2019 - 100% data,207
+172,    Median after-tax income in 2019 among recipients ($),208
+173,  Number of market income recipients aged 15 years and over in private households in 2019 - 100% data,209
+174,    Median market income in 2019 among recipients ($),210
+175,  Number of employment income recipients aged 15 years and over in private households in 2019 - 100% data,211
+176,    Median employment income in 2019 among recipients ($),212
+177,  Number of government transfers recipients aged 15 years and over in private households in 2019 - 100% data,213
+178,    Median government transfers in 2019 among recipients ($),214
+179,  Number of employment insurance benefits recipients aged 15 years and over in private households in 2019 -100% data,215
+180,    Median employment insurance benefits in 2019 among recipients ($),216
+181,Total - Income statistics in 2019 for the population aged 15 years and over in private households - 25% sample data,217
+182,  Number of total income recipients aged 15 years and over in private households in 2019 - 25% sample data,218
+183,    Average total income in 2019 among recipients ($),219
+184,  Number of after-tax income recipients aged 15 years and over in private households in 2019 - 25% sample data,220
+185,    Average after-tax income in 2019 among recipients ($),221
+186,  Number of market income recipients aged 15 years and over in private households in 2019 - 25% sample data,222
+187,    Average market income in 2019 among recipients ($),223
+188,  Number of employment income recipients aged 15 years and over in private households in 2019 - 25% sample data,224
+189,    Average employment income in 2019 among recipients ($),225
+190,  Number of government transfers recipients aged 15 years and over in private households in 2019 - 25% sample data,226
+191,    Average government transfers in 2019 among recipients ($),227
+192,  Number of employment insurance benefits recipients aged 15 years and over in private households in 2019 - 25% sample data,228
+193,    Average employment insurance benefits in 2019 among recipients ($),229
+194,Total - Employment income statistics in 2019 for the population aged 15 years and over in private households - 25% sample data,230
+195,  Number of employment income recipients in 2019 who worked full-year full-time in 2020 - 25% sample data,231
+196,    Median employment income in 2019 for full-year full-time workers in 2020 ($),232
+197,    Average employment income in 2019 for full-year full-time workers in 2020 ($),233
+198,  Number of employment income recipients in 2019 who worked part-year or part-time in 2020 - 25% sample data,234
+199,    Median employment income in 2019 of those who worked part-year or part-time in 2020 ($),235
+200,    Average employment income in 2019 of those who worked part-year or part-time in 2020 ($),236
+201,Composition of total income in 2019 of the population aged 15 years and over in private households (%) - 25% sample data,237
+202,Total - Income statistics for private households - 100% data,242
+203,  Median total income of household in 2020 ($),243
+204,  Median after-tax income of household in 2020 ($),244
+205,    Total - Income statistics for one-person private households - 100% data,245
+206,      Median total income of one-person households in 2020 ($),246
+207,      Median after-tax income of one-person households in 2020 ($),247
+208,    Total - Income statistics for two-or-more-persons private households - 100% data,248
+209,      Median total income of two-or-more-person households in 2020 ($),249
+210,      Median after-tax income of two-or-more-person households in 2020 ($),250
+211,Total - Income statistics for private households - 25% sample data,251
+212,  Average total income of household in 2020 ($),252
+213,  Average after-tax income of household in 2020 ($),253
+214,    Total - Income statistics for one-person private households - 25% sample data,254
+215,      Average total income of one-person households in 2020 ($),255
+216,      Average after-tax income of one-person households in 2020 ($),256
+217,    Total - Income statistics for two-or-more-persons private households - 25% sample data,257
+218,      Average total income of two-or-more-person households in 2020 ($),258
+219,      Average after-tax income of two-or-more-person households in 2020 ($),259
+220,Total - Household total income groups in 2020 for private households - 100% data,260
+221,"  Under $5,000",261
+222,"  $5,000 to $9,999",262
+223,"  $10,000 to $14,999",263
+224,"  $15,000 to $19,999",264
+225,"  $20,000 to $24,999",265
+226,"  $25,000 to $29,999",266
+227,"  $30,000 to $34,999",267
+228,"  $35,000 to $39,999",268
+229,"  $40,000 to $44,999",269
+230,"  $45,000 to $49,999",270
+231,"  $50,000 to $59,999",271
+232,"  $60,000 to $69,999",272
+233,"  $70,000 to $79,999",273
+234,"  $80,000 to $89,999",274
+235,"  $90,000 to $99,999",275
+236,"  $100,000 and over",276
+237,"    $100,000 to $124,999",277
+238,"    $125,000 to $149,999",278
+239,"    $150,000 to $199,999",279
+240,"    $200,000 and over",280
+241,Total - Household after-tax income groups in 2020 for private households - 100% data,281
+242,"    $150,000 and over",300
+243,Total - Income statistics for economic families in private households - 100% data,301
+244,  Median total income of economic family in 2020 ($),302
+245,  Median after-tax income of economic family in 2020 ($),303
+246,  Average family size of economic families,304
+247,Total - Income statistics for couple-only economic families in private households - 100% data,305
+248,  Median total income of couple-only economic families in 2020 ($),306
+249,  Median after-tax income of couple-only economic families in 2020 ($),307
+250,  Average family size of couple-only economic families,308
+251,Total - Income statistics for couple-with-children economic families in private households - 100% data,309
+252,  Median total income of couple-with-children economic families  in 2020 ($),310
+253,  Median after-tax income of couple-with-children economic families in 2020 ($),311
+254,  Average family size of couple-with-children economic families,312
+255,Total - Income statistics for one-parent economic families in private households - 100% data,313
+256,  Median total income of one-parent economic families in 2020 ($),314
+257,  Median after-tax income of one-parent economic families in 2020 ($),315
+258,  Average family size of one-parent economic families,316
+259,Total - Income statistics for persons aged 15 years and over not in economic families in private households - 100% data,317
+260,  Median total income in 2020 ($),318
+261,  Median after-tax income in 2020 ($),319
+262,Total - Income statistics for economic families in private households - 25% sample data,320
+263,  Average total income of economic family in 2020 ($),321
+264,  Average after-tax income of economic family in 2020 ($),322
+265,Total - Income statistics for couple-only economic families in private households - 25% sample data,323
+266,  Average total income of couple-only economic families in 2020 ($),324
+267,  Average after-tax income of couple-only economic families in 2020 ($),325
+268,Total - Income statistics for couple-with-children economic families in private households - 25% sample data,326
+269,  Average total income of couple-with-children economic families in 2020 ($),327
+270,  Average after-tax income of couple-with-children economic families in 2020 ($),328
+271,Total - Income statistics for one-parent economic families in private households - 25% sample data,329
+272,  Average total income of one-parent economic families in 2020 ($),330
+273,  Average after-tax income of one-parent economic families in 2020 ($),331
+274,Total - Income statistics for persons aged 15 years and over not in economic families in private households - 25% sample data,332
+275,  Average total income in 2020 ($),333
+276,  Average after-tax income in 2020 ($),334
+277,Total - LIM low-income status in 2020 for the population in private households - 100% data,335
+278,  0 to 17 years,336
+279,    0 to 5 years,337
+280,  18 to 64 years,338
+281,"In low income based on the Low-income measure, after tax (LIM-AT)",340
+282,"Prevalence of low income based on the Low-income measure, after tax (LIM-AT) (%)",345
+283,  0 to 17 years (%),346
+284,    0 to 5 years (%),347
+285,  18 to 64 years (%),348
+286,  65 years and over (%),349
+287,Total - LICO low-income status in 2020 for the population in private households to whom the low-income concept is applicable - 100% data,350
+288,"In low income based on the Low-income cut-offs, after tax (LICO-AT)",355
+289,"Prevalence of low income based on the Low-income cut-offs, after tax (LICO-AT) (%)",360
+290,Total - Adjusted after-tax economic family income decile group for the population in private households - 100% data,365
+291,  In bottom half of the distribution,366
+292,    In bottom decile,367
+293,    In second decile,368
+294,    In third decile,369
+295,    In fourth decile,370
+296,    In fifth decile,371
+297,  In top half of the distribution,372
+298,    In sixth decile,373
+299,    In seventh decile,374
+300,    In eighth decile,375
+301,    In ninth decile,376
+302,    In top decile,377
+303,Total - Inequality measures for the population in private households - 100% data,378
+304,  Gini index on adjusted household total income,379
+305,  Gini index on adjusted household market income,380
+306,  Gini index on adjusted household after-tax income,381
+307,  P90/P10 ratio on adjusted household after-tax income,382
+308,Total - Knowledge of official languages for the total population excluding institutional residents - 100% data,383
+309,  English only,384
+310,  French only,385
+311,  English and French,386
+312,  Neither English nor French,387
+313,Total - First official language spoken for the total population excluding institutional residents - 100% data,388
+314,  English,389
+315,  French,390
+316,Total - Mother tongue for the total population excluding institutional residents - 100% data,393
+317,  Single responses,394
+318,    Official languages,395
+319,      English,396
+320,      French,397
+321,    Non-official languages,398
+322,      Indigenous languages,399
+323,        Algonquian languages,400
+324,          Blackfoot,401
+325,          Cree-Innu languages,402
+326,            Atikamekw,403
+327,            Cree languages,404
+328,              Ililimowin (Moose Cree),405
+329,              Inu Ayimun (Southern East Cree),406
+330,              Iyiyiw-Ayimiwin (Northern East Cree),407
+331,              Nehinawewin (Swampy Cree),408
+332,              Nehiyawewin (Plains Cree),409
+333,              Nihithawiwin (Woods Cree),410
+334,"              Cree, n.o.s.",411
+335,            Innu (Montagnais),412
+336,            Naskapi,413
+337,          Eastern Algonquian languages,414
+338,            Mi'kmaq,415
+339,            Wolastoqewi (Malecite),416
+340,          Ojibway-Potawatomi languages,417
+341,            Anicinabemowin (Algonquin),418
+342,            Oji-Cree,419
+343,            Ojibway languages,420
+344,              Anishinaabemowin (Chippewa),421
+345,              Daawaamwin (Odawa),422
+346,              Saulteau (Western Ojibway),423
+347,"              Ojibway, n.o.s.",424
+348,"          Algonquian languages, n.i.e.",425
+349,        Athabaskan languages,426
+350,          Northern Athabaskan languages,427
+351,            Dakelh (Carrier),428
+352,            Dane-zaa (Beaver),429
+353,"            Dene, n.o.s.",430
+354,            Gwich'in,431
+355,            Slavey-Hare languages,432
+356,              Deh Gah Ghotie Zhatie (South Slavey),433
+357,              Satuotine Yati (North Slavey),434
+358,"              Slavey, n.o.s.",435
+359,            Tahltan languages,436
+360,              Kaska (Nahani),437
+361,              Tahltan,438
+362,            Tlicho (Dogrib),439
+363,            Tse'khene (Sekani),440
+364,            Tsilhqot'in (Chilcotin),441
+365,            Tsuu T'ina (Sarsi),442
+366,            Tutchone languages,443
+367,              Northern Tutchone,444
+368,              Southern Tutchone,445
+369,"              Tutchone, n.o.s.",446
+370,            Wetsuwet'en-Babine,447
+371,          Tlingit,448
+372,"          Athabaskan languages, n.i.e.",449
+373,        Haida,450
+374,        Inuktut (Inuit) languages,451
+375,          Inuinnaqtun (Inuvialuktun),452
+376,            Inuinnaqtun,453
+377,            Inuvialuktun,454
+378,          Inuktitut,455
+379,"          Inuktut (Inuit) languages, n.i.e.",456
+380,        Iroquoian languages,457
+381,          Cayuga,458
+382,          Mohawk,459
+383,          Oneida,460
+384,"          Iroquoian languages, n.i.e.",461
+385,        Ktunaxa (Kutenai),462
+386,        Michif,463
+387,        Salish languages,464
+388,          Halkomelem,465
+389,          Lillooet,466
+390,          Ntlakapamux (Thompson),467
+391,          Secwepemctsin (Shuswap),468
+392,          Squamish,469
+393,          Straits,470
+394,          Syilx (Okanagan),471
+395,"          Salish languages, n.i.e.",472
+396,        Siouan languages,473
+397,          Assiniboine,474
+398,          Dakota,475
+399,          Stoney,476
+400,"          Siouan languages, n.i.e.",477
+401,        Tsimshian languages,478
+402,          Gitxsan (Gitksan),479
+403,          Nisga'a,480
+404,          Tsimshian,481
+405,        Wakashan languages,482
+406,          Haisla,483
+407,          Heiltsuk,484
+408,          Kwak'wala (Kwakiutl),485
+409,          Nuu-chah-nulth (Nootka),486
+410,"          Wakashan languages, n.i.e.",487
+411,"        Indigenous languages, n.i.e.",488
+412,"        Indigenous languages, n.o.s.",489
+413,      Non-Indigenous languages,490
+414,        Afro-Asiatic languages,491
+415,          Berber languages,492
+416,            Kabyle,493
+417,            Tamazight,494
+418,"            Berber languages, n.i.e.",495
+419,          Chadic languages,496
+420,            Hausa,497
+421,            Mina,498
+422,          Coptic,499
+423,          Cushitic languages,500
+424,            Bilen,501
+425,            Oromo,502
+426,            Somali,503
+427,"            Cushitic languages, n.i.e.",504
+428,          Semitic languages,505
+429,            Amharic,506
+430,            Arabic,507
+431,            Aramaic languages,508
+432,              Assyrian Neo-Aramaic,509
+433,              Chaldean Neo-Aramaic,510
+434,"              Aramaic, n.o.s.",511
+435,            Harari,512
+436,            Hebrew,513
+437,            Maltese,514
+438,            Tigrigna,515
+439,"            Semitic languages, n.i.e.",516
+440,        Austro-Asiatic languages,517
+441,          Khmer (Cambodian),518
+442,          Vietnamese,519
+443,"          Austro-Asiatic languages, n.i.e",520
+444,        Austronesian languages,521
+445,          Bikol,522
+446,"          Bisaya, n.o.s.",523
+447,          Cebuano,524
+448,          Fijian,525
+449,          Hiligaynon,526
+450,          Ilocano,527
+451,          Indonesian,528
+452,          Kankanaey,529
+453,          Kinaray-a,530
+454,          Malagasy languages,531
+455,            Merina,532
+456,"            Malagasy, n.o.s.",533
+457,          Malay,534
+458,"          Pampangan (Kapampangan, Pampango)",535
+459,          Pangasinan,536
+460,"          Tagalog (Pilipino, Filipino)",537
+461,          Waray-Waray,538
+462,"          Austronesian languages, n.i.e.",539
+463,        Creole languages,540
+464,          Haitian Creole,541
+465,          Jamaican English Creole,542
+466,          Krio,543
+467,          Morisyen,544
+468,          Sango,545
+469,"          Creole, n.o.s.",546
+470,"          Creole languages, n.i.e.",547
+471,        Dravidian languages,548
+472,          Kannada,549
+473,          Malayalam,550
+474,          Tamil,551
+475,          Telugu,552
+476,          Tulu,553
+477,"          Dravidian languages, n.i.e.",554
+478,        Georgian,555
+479,        Hmong-Mien languages,556
+480,        Indo-European languages,557
+481,          Albanian,558
+482,          Armenian,559
+483,          Balto-Slavic languages,560
+484,            Baltic languages,561
+485,              Latvian,562
+486,              Lithuanian,563
+487,            Slavic languages,564
+488,              Belarusian,565
+489,              Bulgarian,566
+490,              Czech,567
+491,              Macedonian,568
+492,              Polish,569
+493,              Russian,570
+494,              Rusyn,571
+495,              Serbo-Croatian,572
+496,                Bosnian,573
+497,                Croatian,574
+498,                Serbian,575
+499,"                Serbo-Croatian, n.i.e.",576
+500,              Slovak,577
+501,              Slovene (Slovenian),578
+502,              Ukrainian,579
+503,"              Slavic languages, n.i.e.",580
+504,          Celtic languages,581
+505,            Irish,582
+506,            Scottish Gaelic,583
+507,            Welsh,584
+508,"            Celtic languages, n.i.e.",585
+509,          Germanic languages,586
+510,            Frisian,587
+511,            High German languages,588
+512,              German,589
+513,              Pennsylvania German,590
+514,              Swiss German,591
+515,              Yiddish,592
+516,            Low Saxon-Low Franconian languages,593
+517,              Afrikaans,594
+518,              Dutch,595
+519,"              Low German, n.o.s.",596
+520,              Low Saxon,597
+521,              Plautdietsch,598
+522,              Vlaams (Flemish),599
+523,            Scandinavian languages,600
+524,              Danish,601
+525,              Icelandic,602
+526,              Norwegian,603
+527,              Swedish,604
+528,"            Germanic languages, n.i.e.",605
+529,          Greek,606
+530,          Indo-Iranian languages,607
+531,            Indo-Aryan languages,608
+532,              Assamese,609
+533,              Bengali,610
+534,              Gujarati,611
+535,              Hindi,612
+536,              Kacchi,613
+537,              Kashmiri,614
+538,              Konkani,615
+539,              Marathi,616
+540,              Nepali,617
+541,              Oriya languages,618
+542,                Odia,619
+543,"                Oriya, n.o.s.",620
+544,              Punjabi (Panjabi),621
+545,              Rohingya,622
+546,              Sindhi,623
+547,              Sinhala (Sinhalese),624
+548,              Urdu,625
+549,"              Indo-Aryan languages, n.i.e.",626
+550,            Iranian languages,627
+551,              Baluchi,628
+552,              Kurdish,629
+553,              Parsi,630
+554,              Pashto,631
+555,              Persian languages,632
+556,                Dari,633
+557,                Iranian Persian,634
+558,"                Persian (Farsi), n.o.s.",635
+559,"              Iranian languages, n.i.e.",636
+560,"            Indo-Iranian languages, n.i.e.",637
+561,          Italic (Romance) languages,638
+562,            Catalan,639
+563,            Italian,640
+564,            Portuguese,641
+565,            Romanian,642
+566,            Spanish,643
+567,"            Italic (Romance) languages, n.i.e.",644
+568,"          Indo-European languages, n.i.e.",645
+569,        Japanese,646
+570,        Korean,647
+571,        Mongolian,648
+572,        Niger-Congo languages,649
+573,          Akan (Twi),650
+574,          Bamanankan,651
+575,          Edo,652
+576,          Éwé,653
+577,"          Fulah (Pular, Pulaar, Fulfulde)",654
+578,          Ga,655
+579,          Ganda,656
+580,          Gikuyu,657
+581,          Igbo,658
+582,          Kinyarwanda (Rwanda),659
+583,          Lingala,660
+584,          Luba-Kasai,661
+585,          Mòoré,662
+586,          Mwani,663
+587,          Ndebele,664
+588,          Rundi (Kirundi),665
+589,          Shona,666
+590,          Soninke,667
+591,          Sotho-Tswana languages,668
+592,          Swahili,669
+593,          Wojenaka,670
+594,          Wolof,671
+595,          Yoruba,672
+596,"          Niger-Congo languages, n.i.e.",673
+597,        Nilo-Saharan languages,674
+598,          Dinka,675
+599,          Nuer,676
+600,"          Nilo-Saharan languages, n.i.e.",677
+601,"          African, n.o.s.",678
+602,        Sign languages,679
+603,          American Sign Language,680
+604,          Quebec Sign Language,681
+605,"          Sign languages, n.i.e.",682
+606,        Sino-Tibetan languages,683
+607,          Chinese languages,684
+608,            Hakka,685
+609,            Mandarin,686
+610,            Min Dong,687
+611,"            Min Nan (Chaochow, Teochow, Fukien, Taiwanese)",688
+612,            Wu (Shanghainese),689
+613,            Yue (Cantonese),690
+614,"            Chinese, n.o.s.",691
+615,"            Chinese languages, n.i.e.",692
+616,          Tibeto-Burman languages,693
+617,            Burmese,694
+618,            Kuki-Chin languages,695
+619,            Karenic languages,696
+620,              S'gaw Karen,697
+621,"              Karenic languages, n.i.e.",698
+622,            Tibetan,699
+623,"            Tibeto-Burman languages, n.i.e.",700
+624,"          Sino-Tibetan languages, n.i.e.",701
+625,        Tai-Kadai languages,702
+626,          Lao,703
+627,          Thai,704
+628,"          Tai-Kadai languages, n.i.e.",705
+629,        Turkic languages,706
+630,          Azerbaijani,707
+631,          Kazakh,708
+632,          Turkish,709
+633,          Uyghur,710
+634,          Uzbek,711
+635,"          Turkic languages, n.i.e.",712
+636,        Uralic languages,713
+637,          Estonian,714
+638,          Finnish,715
+639,          Hungarian,716
+640,"        Other languages, n.i.e.",717
+641,  Multiple responses,718
+642,    English and French,719
+643,    English and non-official language(s),720
+644,    French and non-official language(s),721
+645,"    English, French and non-official language(s)",722
+646,    Multiple non-official languages,723
+647,Total - All languages spoken at home for the total population excluding institutional residents - 100% data,724
+648,  Non-official language,727
+649,    Indigenous,728
+650,    Non-Indigenous,729
+651,  English and non-official language(s),731
+652,  French and non-official language(s),732
+653,"  English, French and non-official language(s)",733
+654,  Multiple non-official languages,734
+655,Total - Language spoken most often at home for the total population excluding institutional residents - 100% data,735
+656,Total - Other language(s) spoken regularly at home for the total population excluding institutional residents - 100% data,1066
+657,  None,1067
+658,Total - Knowledge of languages for the population in private households - 25% sample data,1078
+659,  Official languages,1079
+660,    English,1080
+661,    French,1081
+662,  Non-official languages,1082
+663,    Indigenous languages,1083
+664,      Algonquian languages,1084
+665,        Blackfoot,1085
+666,        Cree-Innu languages,1086
+667,          Atikamekw,1087
+668,          Cree languages,1088
+669,            Ililimowin (Moose Cree),1089
+670,            Inu Ayimun (Southern East Cree),1090
+671,            Iyiyiw-Ayimiwin (Northern East Cree),1091
+672,            Nehinawewin (Swampy Cree),1092
+673,            Nehiyawewin (Plains Cree),1093
+674,            Nihithawiwin (Woods Cree),1094
+675,"            Cree, n.o.s.",1095
+676,          Innu (Montagnais),1096
+677,          Naskapi,1097
+678,        Eastern Algonquian languages,1098
+679,          Mi'kmaq,1099
+680,          Wolastoqewi (Malecite),1100
+681,        Ojibway-Potawatomi languages,1101
+682,          Anicinabemowin (Algonquin),1102
+683,          Oji-Cree,1103
+684,          Ojibway languages,1104
+685,            Anishinaabemowin (Chippewa),1105
+686,            Daawaamwin (Odawa),1106
+687,            Saulteau (Western Ojibway),1107
+688,"            Ojibway, n.o.s.",1108
+689,"        Algonquian languages, n.i.e.",1109
+690,      Athabaskan languages,1110
+691,        Northern Athabaskan languages,1111
+692,          Dakelh (Carrier),1112
+693,          Dane-zaa (Beaver),1113
+694,"          Dene, n.o.s.",1114
+695,          Gwich'in,1115
+696,          Slavey-Hare languages,1116
+697,            Deh Gah Ghotie Zhatie (South Slavey),1117
+698,            Satuotine Yati (North Slavey),1118
+699,"            Slavey, n.o.s.",1119
+700,          Tahltan languages,1120
+701,            Kaska (Nahani),1121
+702,            Tahltan,1122
+703,          Tlicho (Dogrib),1123
+704,          Tse'khene (Sekani),1124
+705,          Tsilhqot'in (Chilcotin),1125
+706,          Tsuu T'ina (Sarsi),1126
+707,          Tutchone languages,1127
+708,            Northern Tutchone,1128
+709,            Southern Tutchone,1129
+710,"            Tutchone, n.o.s.",1130
+711,          Wetsuwet'en-Babine,1131
+712,        Tlingit,1132
+713,"        Athabaskan languages, n.i.e.",1133
+714,      Haida,1134
+715,      Inuktut (Inuit) languages,1135
+716,        Inuinnaqtun (Inuvialuktun),1136
+717,          Inuinnaqtun,1137
+718,          Inuvialuktun,1138
+719,        Inuktitut,1139
+720,"        Inuktut (Inuit) languages, n.i.e.",1140
+721,      Iroquoian languages,1141
+722,        Cayuga,1142
+723,        Mohawk,1143
+724,        Oneida,1144
+725,"        Iroquoian languages, n.i.e.",1145
+726,      Ktunaxa (Kutenai),1146
+727,      Michif,1147
+728,      Salish languages,1148
+729,        Halkomelem,1149
+730,        Lillooet,1150
+731,        Ntlakapamux (Thompson),1151
+732,        Secwepemctsin (Shuswap),1152
+733,        Squamish,1153
+734,        Straits,1154
+735,        Syilx (Okanagan),1155
+736,"        Salish languages, n.i.e.",1156
+737,      Siouan languages,1157
+738,        Assiniboine,1158
+739,        Dakota,1159
+740,        Stoney,1160
+741,"        Siouan languages, n.i.e.",1161
+742,      Tsimshian languages,1162
+743,        Gitxsan (Gitksan),1163
+744,        Nisga'a,1164
+745,        Tsimshian,1165
+746,      Wakashan languages,1166
+747,        Haisla,1167
+748,        Heiltsuk,1168
+749,        Kwak'wala (Kwakiutl),1169
+750,        Nuu-chah-nulth (Nootka),1170
+751,"        Wakashan languages, n.i.e.",1171
+752,"      Indigenous languages, n.i.e.",1172
+753,"      Indigenous languages, n.o.s.",1173
+754,    Non-Indigenous languages,1174
+755,      Afro-Asiatic languages,1175
+756,        Berber languages,1176
+757,          Kabyle,1177
+758,          Tamazight,1178
+759,"          Berber languages, n.i.e.",1179
+760,        Chadic languages,1180
+761,          Hausa,1181
+762,          Mina,1182
+763,        Coptic,1183
+764,        Cushitic languages,1184
+765,          Bilen,1185
+766,          Oromo,1186
+767,          Somali,1187
+768,"          Cushitic languages, n.i.e.",1188
+769,        Semitic languages,1189
+770,          Amharic,1190
+771,          Arabic,1191
+772,          Aramaic languages,1192
+773,            Assyrian Neo-Aramaic,1193
+774,            Chaldean Neo-Aramaic,1194
+775,"            Aramaic, n.o.s.",1195
+776,          Harari,1196
+777,          Hebrew,1197
+778,          Maltese,1198
+779,          Tigrigna,1199
+780,"          Semitic languages, n.i.e.",1200
+781,      Austro-Asiatic languages,1201
+782,        Khmer (Cambodian),1202
+783,        Vietnamese,1203
+784,"        Austro-Asiatic languages, n.i.e",1204
+785,      Austronesian languages,1205
+786,        Bikol,1206
+787,"        Bisaya, n.o.s.",1207
+788,        Cebuano,1208
+789,        Fijian,1209
+790,        Hiligaynon,1210
+791,        Ilocano,1211
+792,        Indonesian,1212
+793,        Kankanaey,1213
+794,        Kinaray-a,1214
+795,        Malagasy languages,1215
+796,          Merina,1216
+797,"          Malagasy, n.o.s.",1217
+798,        Malay,1218
+799,"        Pampangan (Kapampangan, Pampango)",1219
+800,        Pangasinan,1220
+801,"        Tagalog (Pilipino, Filipino)",1221
+802,        Waray-Waray,1222
+803,"        Austronesian languages, n.i.e.",1223
+804,      Creole languages,1224
+805,        Haitian Creole,1225
+806,        Jamaican English Creole,1226
+807,        Krio,1227
+808,        Morisyen,1228
+809,        Sango,1229
+810,"        Creole, n.o.s.",1230
+811,"        Creole languages, n.i.e.",1231
+812,      Dravidian languages,1232
+813,        Kannada,1233
+814,        Malayalam,1234
+815,        Tamil,1235
+816,        Telugu,1236
+817,        Tulu,1237
+818,"        Dravidian languages, n.i.e.",1238
+819,      Georgian,1239
+820,      Hmong-Mien languages,1240
+821,      Indo-European languages,1241
+822,        Albanian,1242
+823,        Armenian,1243
+824,        Balto-Slavic languages,1244
+825,        Baltic languages,1245
+826,            Latvian,1246
+827,            Lithuanian,1247
+828,          Slavic languages,1248
+829,            Belarusian,1249
+830,            Bulgarian,1250
+831,            Czech,1251
+832,            Macedonian,1252
+833,            Polish,1253
+834,            Russian,1254
+835,            Rusyn,1255
+836,            Serbo-Croatian,1256
+837,              Bosnian,1257
+838,              Croatian,1258
+839,              Serbian,1259
+840,"              Serbo-Croatian, n.i.e.",1260
+841,            Slovak,1261
+842,            Slovene (Slovenian),1262
+843,            Ukrainian,1263
+844,"            Slavic languages, n.i.e.",1264
+845,        Celtic languages,1265
+846,          Irish,1266
+847,          Scottish Gaelic,1267
+848,          Welsh,1268
+849,"          Celtic languages, n.i.e.",1269
+850,        Germanic languages,1270
+851,          Frisian,1271
+852,          High German languages,1272
+853,            German,1273
+854,            Pennsylvania German,1274
+855,            Swiss German,1275
+856,            Yiddish,1276
+857,          Low Saxon-Low Franconian languages,1277
+858,            Afrikaans,1278
+859,            Dutch,1279
+860,"            Low German, n.o.s.",1280
+861,            Low Saxon,1281
+862,            Plautdietsch,1282
+863,            Vlaams (Flemish),1283
+864,          Scandinavian languages,1284
+865,            Danish,1285
+866,            Icelandic,1286
+867,            Norwegian,1287
+868,            Swedish,1288
+869,"          Germanic languages, n.i.e.",1289
+870,        Greek,1290
+871,        Indo-Iranian languages,1291
+872,          Indo-Aryan languages,1292
+873,            Assamese,1293
+874,            Bengali,1294
+875,            Gujarati,1295
+876,            Hindi,1296
+877,            Kacchi,1297
+878,            Kashmiri,1298
+879,            Konkani,1299
+880,            Marathi,1300
+881,            Nepali,1301
+882,            Oriya languages,1302
+883,              Odia,1303
+884,"              Oriya, n.o.s.",1304
+885,            Punjabi (Panjabi),1305
+886,            Rohingya,1306
+887,            Sindhi,1307
+888,            Sinhala (Sinhalese),1308
+889,            Urdu,1309
+890,"            Indo-Aryan languages, n.i.e.",1310
+891,          Iranian languages,1311
+892,            Baluchi,1312
+893,            Kurdish,1313
+894,            Parsi,1314
+895,            Pashto,1315
+896,            Persian languages,1316
+897,              Dari,1317
+898,              Iranian Persian,1318
+899,"              Persian (Farsi), n.o.s.",1319
+900,"            Iranian languages, n.i.e.",1320
+901,"          Indo-Iranian languages, n.i.e.",1321
+902,        Italic (Romance) languages,1322
+903,          Catalan,1323
+904,          Italian,1324
+905,          Portuguese,1325
+906,          Romanian,1326
+907,          Spanish,1327
+908,"          Italic (Romance) languages, n.i.e.",1328
+909,"        Indo-European languages, n.i.e.",1329
+910,      Japanese,1330
+911,      Korean,1331
+912,      Mongolian,1332
+913,      Niger-Congo languages,1333
+914,        Akan (Twi),1334
+915,        Bamanankan,1335
+916,        Edo,1336
+917,        Éwé,1337
+918,"        Fulah (Pular, Pulaar, Fulfulde)",1338
+919,        Ga,1339
+920,        Ganda,1340
+921,        Gikuyu,1341
+922,        Igbo,1342
+923,        Kinyarwanda (Rwanda),1343
+924,        Lingala,1344
+925,        Luba-Kasai,1345
+926,        Mòoré,1346
+927,        Mwani,1347
+928,        Ndebele,1348
+929,        Rundi (Kirundi),1349
+930,        Shona,1350
+931,        Soninke,1351
+932,        Sotho-Tswana languages,1352
+933,        Swahili,1353
+934,        Wojenaka,1354
+935,        Wolof,1355
+936,        Yoruba,1356
+937,"        Niger-Congo languages, n.i.e.",1357
+938,      Nilo-Saharan languages,1358
+939,        Dinka,1359
+940,        Nuer,1360
+941,"        Nilo-Saharan languages, n.i.e.",1361
+942,"        African, n.o.s.",1362
+943,      Sign languages,1363
+944,        American Sign Language,1364
+945,        Quebec Sign Language,1365
+946,"        Sign languages, n.i.e.",1366
+947,      Sino-Tibetan languages,1367
+948,        Chinese languages,1368
+949,          Hakka,1369
+950,          Mandarin,1370
+951,          Min Dong,1371
+952,"          Min Nan (Chaochow, Teochow, Fukien, Taiwanese)",1372
+953,          Wu (Shanghainese),1373
+954,          Yue (Cantonese),1374
+955,"          Chinese, n.o.s.",1375
+956,"          Chinese languages, n.i.e.",1376
+957,        Tibeto-Burman languages,1377
+958,          Burmese,1378
+959,          Kuki-Chin languages,1379
+960,          Karenic languages,1380
+961,            S'gaw Karen,1381
+962,"            Karenic languages, n.i.e.",1382
+963,          Tibetan,1383
+964,"          Tibeto-Burman languages, n.i.e.",1384
+965,"        Sino-Tibetan languages, n.i.e.",1385
+966,      Tai-Kadai languages,1386
+967,        Lao,1387
+968,        Thai,1388
+969,"        Tai-Kadai languages, n.i.e.",1389
+970,      Turkic languages,1390
+971,        Azerbaijani,1391
+972,        Kazakh,1392
+973,        Turkish,1393
+974,        Uyghur,1394
+975,        Uzbek,1395
+976,"        Turkic languages, n.i.e.",1396
+977,      Uralic languages,1397
+978,        Estonian,1398
+979,        Finnish,1399
+980,        Hungarian,1400
+981,"      Other languages, n.i.e.",1401
+982,Total - Indigenous identity for the population in private households - 25% sample data,1402
+983,  Indigenous identity,1403
+984,    Single Indigenous responses,1404
+985,      First Nations (North American Indian),1405
+986,      Métis,1406
+987,      Inuk (Inuit),1407
+988,    Multiple Indigenous responses,1408
+989,    Indigenous responses not included elsewhere,1409
+990,  Non-Indigenous identity,1410
+991,Total - Registered or Treaty Indian status for the population in private households - 25% sample data,1411
+992,  Registered or Treaty Indian,1412
+993,  Not a Registered or Treaty Indian,1413
+994,Total - Private households by tenure - 25% sample data,1414
+995,  Owner,1415
+996,  Renter,1416
+997,"  Dwelling provided by the local government, First Nation or Indian band",1417
+998,Total - Occupied private dwellings by condominium status - 25% sample data,1418
+999,  Condominium,1419
+1000,  Not condominium,1420
+1001,Total - Occupied private dwellings by number of bedrooms - 25% sample data,1421
+1002,  No bedrooms,1422
+1003,  1 bedroom,1423
+1004,  2 bedrooms,1424
+1005,  3 bedrooms,1425
+1006,  4 or more bedrooms,1426
+1007,Total - Occupied private dwellings by number of rooms - 25% sample data,1427
+1008,  1 to 4 rooms,1428
+1009,  5 rooms,1429
+1010,  6 rooms,1430
+1011,  7 rooms,1431
+1012,  8 or more rooms,1432
+1013,Average number of rooms per dwelling,1433
+1014,Total - Private households by number of persons per room - 25% sample data,1434
+1015,  One person or fewer per room,1435
+1016,  More than one person per room,1436
+1017,Total - Private households by housing suitability - 25% sample data,1437
+1018,  Suitable,1438
+1019,  Not suitable,1439
+1020,Total - Occupied private dwellings by period of construction - 25% sample data,1440
+1021,  1960 or before,1441
+1022,  1961 to 1980,1442
+1023,  1981 to 1990,1443
+1024,  1991 to 2000,1444
+1025,  2001 to 2005,1445
+1026,  2006 to 2010,1446
+1027,  2011 to 2015,1447
+1028,  2016 to 2021,1448
+1029,Total - Occupied private dwellings by dwelling condition - 25% sample data,1449
+1030,  Only regular maintenance and minor repairs needed,1450
+1031,  Major repairs needed,1451
+1032,Total - Private households by number of household maintainers - 25% sample data,1452
+1033,  One-maintainer household,1453
+1034,  Two-maintainer household,1454
+1035,  Three-or-more-maintainer household,1455
+1036,Total - Private households by age of primary household maintainers - 25% sample data,1456
+1037,  15 to 24 years,1457
+1038,  25 to 34 years,1458
+1039,  35 to 44 years,1459
+1040,  45 to 54 years,1460
+1041,  55 to 64 years,1461
+1042,  65 to 74 years,1462
+1043,  75 to 84 years,1463
+1044,  85 years and over,1464
+1045,"Total - Owner and tenant households with household total income greater than zero, in non-farm, non-reserve private dwellings by shelter-cost-to-income ratio - 25% sample data",1465
+1046,  Spending less than 30% of income on shelter costs,1466
+1047,  Spending 30% or more of income on shelter costs,1467
+1048,    30% to less than 100%,1468
+1049,Total - Occupied private dwellings by housing indicators - 25% sample data,1469
+1050,  Total - Households 'spending 30% or more of income on shelter costs' or 'not suitable' or 'major repairs needed',1470
+1051,    Spending 30% or more of income on shelter costs only,1471
+1052,    Not suitable only,1472
+1053,    Major repairs needed only,1473
+1054,    'Spending 30% or more of income on shelter costs' and 'not suitable',1474
+1055,    'Spending 30% or more of income on shelter costs' and 'major repairs needed',1475
+1056,    'Not suitable' and 'major repairs needed',1476
+1057,    'Spending 30% or more of income on shelter costs' and 'not suitable' and 'major repairs needed',1477
+1058,  Acceptable housing,1478
+1059,"Total - Owner and tenant households with household total income greater than zero and shelter-cost-to-income ratio less than 100%, in non-farm, non-reserve private dwellings - 25% sample data",1479
+1060,  In core need,1480
+1061,  Not in core need,1481
+1062,"Total - Owner households in non-farm, non-reserve private dwellings - 25% sample data",1482
+1063,  % of owner households with a mortgage,1483
+1064,  % of owner households spending 30% or more of its income on shelter costs,1484
+1065,  % in core housing need,1485
+1066,  Median monthly shelter costs for owned dwellings ($),1486
+1067,  Average monthly shelter costs for owned dwellings ($),1487
+1068,  Median value of dwellings ($),1488
+1069,  Average value of dwellings ($),1489
+1070,"Total - Tenant households in non-farm, non-reserve private dwellings - 25% sample data",1490
+1071,  % of tenant households in subsidized housing,1491
+1072,  % of tenant households spending 30% or more of its income on shelter costs,1492
+1073,  Median monthly shelter costs for rented dwellings ($),1494
+1074,  Average monthly shelter costs for rented dwellings ($),1495
+1075,"Total - Households living in a dwelling provided by the local government, First Nation or Indian band in non-farm private dwellings - 25% sample data",1496
+1076,"  % of households living in a dwelling provided by the local government, First Nation or Indian band spending more than 30% on shelter costs",1497
+1077,"  Median monthly shelter costs for dwellings provided by local government, First Nation or Indian band ($)",1498
+1078,"  Average monthly shelter costs for dwellings provided by local government, First Nation or Indian band ($)",1499
+1079,Total - Indigenous ancestry for the population in private households - 25% sample data,1500
+1080,  Indigenous ancestry (only),1501
+1081,    Single Indigenous ancestry (only),1502
+1082,      First Nations (North American Indian) single ancestry,1503
+1083,      Métis single ancestry,1504
+1084,      Inuit single ancestry,1505
+1085,    Multiple Indigenous ancestries (only),1506
+1086,      First Nations (North American Indian) and Métis ancestry only,1507
+1087,      First Nations (North American Indian) and Inuit ancestry only,1508
+1088,      Métis and Inuit ancestry only,1509
+1089,      First Nations (North American Indian) and Métis and Inuit ancestry only,1510
+1090,  Indigenous and non-Indigenous ancestries,1511
+1091,    Single Indigenous and non-Indigenous ancestries,1512
+1092,      First Nations (North American Indian) and non-Indigenous ancestry only,1513
+1093,      Métis and non-Indigenous ancestry only,1514
+1094,      Inuit and non-Indigenous ancestry only,1515
+1095,    Multiple Indigenous and non-Indigenous ancestries,1516
+1096,      First Nations (North American Indian) and Métis and non-Indigenous ancestry only,1517
+1097,      First Nations (North American Indian) and Inuit and non-Indigenous ancestry only,1518
+1098,      Métis and Inuit and non-Indigenous ancestry only,1519
+1099,      First Nations (North American Indian) and Métis and Inuit and non-Indigenous ancestry only,1520
+1100,  Non-Indigenous ancestry only,1521
+1101,Total - Citizenship for the population in private households - 25% sample data,1522
+1102,  Canadian citizens,1523
+1103,    Canadian citizens aged under 18,1524
+1104,    Canadian citizens aged 18 and over,1525
+1105,  Not Canadian citizens,1526
+1106,Total - Immigrant status and period of immigration for the population in private households - 25% sample data,1527
+1107,  Non-immigrants,1528
+1108,  Immigrants,1529
+1109,    Before 1980,1530
+1110,    1980 to 1990,1531
+1111,    1991 to 2000,1532
+1112,    2001 to 2010,1533
+1113,    2011 to 2021,1534
+1114,      2011 to 2015,1535
+1115,      2016 to 2021,1536
+1116,  Non-permanent residents,1537
+1117,Total - Age at immigration for the immigrant population in private households - 25% sample data,1538
+1118,  Under 5 years,1539
+1119,  5 to 14 years,1540
+1120,  25 to 44 years,1542
+1121,  45 years and over,1543
+1122,Total - Place of birth for the immigrant population in private households - 25% sample data,1544
+1123,  Americas,1545
+1124,    Brazil,1546
+1125,    Colombia,1547
+1126,    El Salvador,1548
+1127,    Guyana,1549
+1128,    Haiti,1550
+1129,    Jamaica,1551
+1130,    Mexico,1552
+1131,    Peru,1553
+1132,    Trinidad and Tobago,1554
+1133,    United States of America,1555
+1134,    Other places of birth in Americas,1556
+1135,  Europe,1557
+1136,    Bosnia and Herzegovina,1558
+1137,    Croatia,1559
+1138,    France,1560
+1139,    Germany,1561
+1140,    Greece,1562
+1141,    Hungary,1563
+1142,    Italy,1564
+1143,    Netherlands,1565
+1144,    Poland,1566
+1145,    Portugal,1567
+1146,    Romania,1568
+1147,    Russian Federation,1569
+1148,    Serbia,1570
+1149,    Ukraine,1571
+1150,    United Kingdom,1572
+1151,    Other places of birth in Europe,1573
+1152,  Africa,1574
+1153,    Algeria,1575
+1154,"    Congo, Democratic Republic of the",1576
+1155,    Egypt,1577
+1156,    Eritrea,1578
+1157,    Ethiopia,1579
+1158,    Morocco,1580
+1159,    Nigeria,1581
+1160,    Somalia,1582
+1161,"    South Africa, Republic of",1583
+1162,    Other places of birth in Africa,1584
+1163,  Asia,1585
+1164,    Afghanistan,1586
+1165,    Iran,1587
+1166,    Iraq,1588
+1167,    Lebanon,1589
+1168,    Syria,1590
+1169,    Turkey,1591
+1170,    China,1592
+1171,    Hong Kong,1593
+1172,"    Korea, South",1594
+1173,    Taiwan,1595
+1174,    Philippines,1596
+1175,    Viet Nam,1597
+1176,    Bangladesh,1598
+1177,    India,1599
+1178,    Pakistan,1600
+1179,    Sri Lanka,1601
+1180,    Other places of birth in Asia,1602
+1181,  Oceania and other places of birth,1603
+1182,Total - Place of birth for the recent immigrant population in private households - 25% sample data,1604
+1183,    Venezuela,1612
+1184,    Ireland,1617
+1185,    Burundi,1625
+1186,    Cameroon,1626
+1187,    Côte d'Ivoire,1628
+1188,    Sudan,1636
+1189,    Tunisia,1637
+1190,    Israel,1647
+1191,    Japan,1648
+1192,    Jordan,1649
+1193,    Nepal,1652
+1194,    Saudi Arabia,1655
+1195,    United Arab Emirates,1659
+1196,  Oceania and other,1662
+1197,    Australia,1663
+1198,    Other places of birth,1664
+1199,Total - Generation status for the population in private households - 25% sample data,1665
+1200,  First generation,1666
+1201,  Second generation,1667
+1202,  Third generation or more,1668
+1203,Total - Admission category and applicant type for the immigrant population in private households who were admitted between 1980 and 2021 - 25% sample data,1669
+1204,  Economic immigrants,1670
+1205,    Principal applicants,1671
+1206,    Secondary applicants,1672
+1207,  Immigrants sponsored by family,1673
+1208,  Refugees,1674
+1209,  Other immigrants,1675
+1210,Total - Pre-admission experience for the immigrant population in private households who were admitted between 1980 and 2021 - 25% sample data,1676
+1211,  Asylum claim before admission,1677
+1212,  Work permits only before admission,1678
+1213,  Study permits only before admission,1679
+1214,  Work and study permits before admission,1680
+1215,  Other permits before admission,1681
+1216,  No pre-admission experience,1682
+1217,Total - Visible minority for the population in private households - 25% sample data,1683
+1218,  Total visible minority population,1684
+1219,    South Asian,1685
+1220,    Chinese,1686
+1221,    Black,1687
+1222,    Filipino,1688
+1223,    Arab,1689
+1224,    Latin American,1690
+1225,    Southeast Asian,1691
+1226,    West Asian,1692
+1227,    Korean,1693
+1228,    Japanese,1694
+1229,"    Visible minority, n.i.e.",1695
+1230,    Multiple visible minorities,1696
+1231,  Not a visible minority,1697
+1232,Total - Ethnic or cultural origin for the population in private households - 25% sample data,1698
+1233,  Canadian,1699
+1234,  Irish,1701
+1235,  Scottish,1702
+1236,"  French, n.o.s.",1703
+1237,  German,1704
+1238,  Chinese,1705
+1239,  Italian,1706
+1240,  Indian (India),1707
+1241,  Ukrainian,1708
+1242,  Dutch,1709
+1243,  Polish,1710
+1244,  Québécois,1711
+1245,"  British Isles, n.o.s.",1712
+1246,  Filipino,1713
+1247,  French Canadian,1714
+1248,"  Caucasian (White), n.o.s.",1715
+1249,"  First Nations (North American Indian), n.o.s.",1716
+1250,  Métis,1717
+1251,"  European, n.o.s.",1718
+1252,  Russian,1719
+1253,  Norwegian,1720
+1254,  Welsh,1721
+1255,  Portuguese,1722
+1256,  American,1723
+1257,  Spanish,1724
+1258,  Swedish,1725
+1259,  Hungarian,1726
+1260,  Acadian,1727
+1261,  Pakistani,1728
+1262,"  African, n.o.s.",1729
+1263,  Jewish,1730
+1264,  Punjabi,1731
+1265,  Vietnamese,1732
+1266,"  Arab, n.o.s.",1733
+1267,  Greek,1734
+1268,  Jamaican,1735
+1269,"  Asian, n.o.s.",1736
+1270,"  Cree, n.o.s.",1737
+1271,  Korean,1738
+1272,  Romanian,1739
+1273,  Lebanese,1740
+1274,  Iranian,1741
+1275,"  Christian, n.i.e.",1742
+1276,  Danish,1743
+1277,"  North American Indigenous, n.o.s.",1744
+1278,  Sikh,1745
+1279,  Austrian,1746
+1280,  Belgian,1747
+1281,  Haitian,1748
+1282,  Hindu,1749
+1283,  Mexican,1750
+1284,  Mennonite,1751
+1285,  Swiss,1752
+1286,  Finnish,1753
+1287,  Sri Lankan,1754
+1288,  Croatian,1755
+1289,  Japanese,1756
+1290,"  South Asian, n.o.s.",1757
+1291,"  Mi'kmaq, n.o.s.",1758
+1292,"  Northern European, n.o.s.",1759
+1293,  Muslim,1760
+1294,  Egyptian,1761
+1295,"  Latin, Central or South American, n.o.s.",1762
+1296,  Tamil,1763
+1297,  Icelandic,1764
+1298,  Colombian,1765
+1299,  Moroccan,1766
+1300,  Czech,1767
+1301,  Syrian,1768
+1302,  Guyanese,1769
+1303,  Afghan,1770
+1304,"  Black, n.o.s.",1771
+1305,  Serbian,1772
+1306,  Ojibway,1773
+1307,  Newfoundlander,1774
+1308,  Hong Konger,1775
+1309,  Ontarian,1776
+1310,  Persian,1777
+1311,  Trinidadian/Tobagonian,1778
+1312,  Turkish,1779
+1313,"  Inuit, n.o.s.",1780
+1314,  Bangladeshi,1781
+1315,  Algerian,1782
+1316,  Brazilian,1783
+1317,  Nigerian,1784
+1318,  Armenian,1785
+1319,  Slovak,1786
+1320,"  Eastern European, n.o.s.",1787
+1321,  Somali,1788
+1322,  Taiwanese,1789
+1323,  Iraqi,1790
+1324,  Salvadorean,1791
+1325,  African Caribbean,1792
+1326,"  East or Southeast Asian, n.o.s.",1793
+1327,"  West or Central Asian or Middle Eastern, n.o.s.",1794
+1328,"  Caribbean, n.o.s.",1795
+1329,  Algonquin,1796
+1330,"  West Indian, n.o.s.",1797
+1331,  Lithuanian,1798
+1332,  South African,1799
+1333,  Australian,1800
+1334,  Palestinian,1801
+1335,  Chilean,1802
+1336,  Congolese,1803
+1337,  Nova Scotian,1804
+1338,  Ethiopian,1805
+1339,"  Hispanic, n.o.s.",1806
+1340,  Peruvian,1807
+1341,  Yoruba,1808
+1342,  Cambodian (Khmer),1809
+1343,  Berber,1810
+1344,  Albanian,1811
+1345,  Maltese,1812
+1346,  Macedonian,1813
+1347,  Slovenian,1814
+1348,"  Western European, n.o.s.",1815
+1349,  New Brunswicker,1816
+1350,  Gujarati,1817
+1351,  Eritrean,1818
+1352,  African Canadian,1819
+1353,  Israeli,1820
+1354,  Mohawk,1821
+1355,"  Czechoslovakian, n.o.s.",1822
+1356,  Bulgarian,1823
+1357,  Albertan,1824
+1358,  Ghanaian,1825
+1359,  Barbadian,1826
+1360,  African American,1827
+1361,"  Yugoslavian, n.o.s.",1828
+1362,  Tunisian,1829
+1363,"  Slavic, n.o.s.",1830
+1364,  Cuban,1831
+1365,  Bosnian,1832
+1366,  Venezuelan,1833
+1367,"  Innu/Montagnais, n.o.s.",1834
+1368,  Latvian,1835
+1369,  Bengali,1836
+1370,  Cameroonian,1837
+1371,  Guatemalan,1838
+1372,  Indonesian,1839
+1373,  Laotian,1840
+1374,  Ilocano,1841
+1375,  Northern Irish,1842
+1376,"  Celtic, n.o.s.",1843
+1377,  British Columbian,1844
+1378,  Ecuadorian,1845
+1379,  Franco Ontarian,1846
+1380,  Argentinian,1847
+1381,  Estonian,1848
+1382,  Kurdish,1849
+1383,  Fijian,1850
+1384,  Jatt,1851
+1385,"  North American, n.o.s.",1852
+1386,  Coptic,1853
+1387,  Thai,1854
+1388,  Dominican,1855
+1389,  Nepali,1856
+1390,  Kabyle,1857
+1391,  Assyrian,1858
+1392,  Igbo,1859
+1393,  Byelorussian,1860
+1394,"  Dene, n.o.s.",1861
+1395,"  Blackfoot, n.o.s.",1862
+1396,  Abenaki,1863
+1397,  Moldovan,1864
+1398,"  Iroquois (Haudenosaunee), n.o.s.",1865
+1399,  New Zealander,1866
+1400,  Sudanese,1867
+1401,  Breton,1868
+1402,  Pennsylvania Dutch,1869
+1403,  Malaysian,1870
+1404,  Plains Cree,1871
+1405,"  North African, n.o.s.",1872
+1406,  Huron (Wendat),1873
+1407,  Saskatchewanian,1874
+1408,  Buddhist,1875
+1409,  Gaspesian,1876
+1410,  Norman,1877
+1411,"  Southern or East African, n.o.s.",1878
+1412,  Ivorian,1879
+1413,  Saulteaux,1880
+1414,"  Anishinaabe, n.o.s.",1881
+1415,  Burundian,1882
+1416,  Tigrinya,1883
+1417,  Nicaraguan,1884
+1418,  Mauritian,1885
+1419,  Kenyan,1886
+1420,  Oji-Cree,1887
+1421,  Vincentian,1888
+1422,  Jordanian,1889
+1423,  Manitoban,1890
+1424,  Cape Bretoner,1891
+1425,  Rwandan,1892
+1426,  Grenadian,1893
+1427,  Malayali,1894
+1428,  Chaldean,1895
+1429,  Sinhalese,1896
+1430,  Mayan,1897
+1431,  Honduran,1898
+1432,  Cherokee,1899
+1433,  Qalipu Mi'kmaq,1900
+1434,  Indo-Caribbean,1901
+1435,  Flemish,1902
+1436,  United Empire Loyalist,1903
+1437,  Senegalese,1904
+1438,  Azerbaijani,1905
+1439,  Sicilian,1906
+1440,  Pashtun,1907
+1441,  Malay,1908
+1442,  Goan,1909
+1443,"  Bantu, n.o.s.",1910
+1444,  Tibetan,1911
+1445,  Zimbabwean,1912
+1446,  Burmese,1913
+1447,  Mongolian,1914
+1448,  Azorean,1915
+1449,  Atikamekw,1916
+1450,  Bamileke,1917
+1451,  Indo-Guyanese,1918
+1452,  Ugandan,1919
+1453,  Oromo,1920
+1454,  Tanzanian,1921
+1455,  Yemeni,1922
+1456,  Central African,1923
+1457,  Libyan,1924
+1458,  Basque,1925
+1459,  Uruguayan,1926
+1460,"  Akan, n.o.s.",1927
+1461,"  Central or West African, n.o.s.",1928
+1462,  Igorot,1929
+1463,  Fulani,1930
+1464,  Woodland Cree,1931
+1465,  Guinean,1932
+1466,  St. Lucian,1933
+1467,  Prince Edward Islander,1934
+1468,  Maliseet,1935
+1469,  Beninese,1936
+1470,  Telugu,1937
+1471,  Roma,1938
+1472,  Costa Rican,1939
+1473,  African Nova Scotian,1940
+1474,  Malagasy,1941
+1475,  Kashmiri,1942
+1476,  Singaporean,1943
+1477,  Karen,1944
+1478,  Edo,1945
+1479,  Tajik,1946
+1480,  Amhara,1947
+1481,  Paraguayan,1948
+1482,Total - Religion for the population in private households - 25% sample data,1949
+1483,  Christian,1951
+1484,"    Christian, n.o.s.",1952
+1485,    Anabaptist,1953
+1486,    Anglican,1954
+1487,    Baptist,1955
+1488,    Catholic,1956
+1489,    Christian Orthodox,1957
+1490,    Jehovah's Witness,1958
+1491,    Latter Day Saints,1959
+1492,    Lutheran,1960
+1493,    Methodist and Wesleyan (Holiness),1961
+1494,    Pentecostal and other Charismatic,1962
+1495,    Presbyterian,1963
+1496,    Reformed,1964
+1497,    United Church,1965
+1498,    Other Christian and Christian-related traditions,1966
+1499,  Traditional (North American Indigenous) spirituality,1971
+1500,  Other religions and spiritual traditions,1972
+1501,  No religion and secular perspectives,1973
+1502,Total - Mobility status 1 year ago - 25% sample data,1974
+1503,  Non-movers,1975
+1504,  Movers,1976
+1505,    Non-migrants,1977
+1506,    Migrants,1978
+1507,      Internal migrants,1979
+1508,        Intraprovincial migrants,1980
+1509,        Interprovincial migrants,1981
+1510,      External migrants,1982
+1511,Total - Mobility status 5 years ago - 25% sample data,1983
+1512,Total - Secondary (high) school diploma or equivalency certificate for the population aged 15 years and over in private households - 25% sample data,1992
+1513,  No high school diploma or equivalency certificate,1993
+1514,  With high school diploma or equivalency certificate,1994
+1515,Total - Secondary (high) school diploma or equivalency certificate for the population aged 25 to 64 years in private households - 25% sample data,1995
+1516,"Total - Highest certificate, diploma or degree for the population aged 15 years and over in private households - 25% sample data",1998
+1517,"  No certificate, diploma or degree",1999
+1518,  High (secondary) school diploma or equivalency certificate,2000
+1519,"  Postsecondary certificate, diploma or degree",2001
+1520,    Postsecondary certificate or diploma below bachelor level,2002
+1521,      Apprenticeship or trades certificate or diploma,2003
+1522,        Non-apprenticeship trades certificate or diploma,2004
+1523,        Apprenticeship certificate,2005
+1524,"      College, CEGEP or other non-university certificate or diploma",2006
+1525,      University certificate or diploma below bachelor level,2007
+1526,    Bachelor's degree or higher,2008
+1527,      Bachelor's degree,2009
+1528,      University certificate or diploma above bachelor level,2010
+1529,"      Degree in medicine, dentistry, veterinary medicine or optometry",2011
+1530,      Master's degree,2012
+1531,      Earned doctorate,2013
+1532,"Total - Highest certificate, diploma or degree for the population aged 25 to 64 years in private households - 25% sample data",2014
+1533,Total - Major field of study - Classification of Instructional Programs (CIP) 2021 for the population aged 15 years and over in private households - 25% sample data,2030
+1534,"  No postsecondary certificate, diploma or degree",2031
+1535,  Education,2032
+1536,    13. Education,2033
+1537,"  Visual and performing arts, and communications technologies",2034
+1538,    10. Communications technologies/technicians and support services,2035
+1539,    50. Visual and performing arts,2036
+1540,  Humanities,2037
+1541,"    16. Indigenous and foreign languages, literatures, and linguistics",2038
+1542,    23. English language and literature/letters,2039
+1543,"    24. Liberal arts and sciences, general studies and humanities",2040
+1544,    30A Interdisciplinary humanities,2041
+1545,    38. Philosophy and religious studies,2042
+1546,    39. Theology and religious vocations,2043
+1547,    54. History,2044
+1548,    55. French language and literature/lettersCAN,2045
+1549,  Social and behavioural sciences and law,2046
+1550,"    05. Area, ethnic, cultural, gender, and group studies",2047
+1551,"    09. Communication, journalism and related programs",2048
+1552,    19. Family and consumer sciences/human sciences,2049
+1553,    22. Legal professions and studies,2050
+1554,    30B Interdisciplinary social and behavioural sciences,2051
+1555,    42. Psychology,2052
+1556,    45. Social sciences,2053
+1557,"  Business, management and public administration",2054
+1558,    30.16 Accounting and computer science,2055
+1559,    44. Public administration and social service professions,2056
+1560,"    52. Business, management, marketing and related support services",2057
+1561,  Physical and life sciences and technologies,2058
+1562,    26. Biological and biomedical sciences,2059
+1563,    30.01 Biological and physical sciences,2060
+1564,    30C Other interdisciplinary physical and life sciences,2061
+1565,    40. Physical sciences,2062
+1566,    41. Science technologies/technicians,2063
+1567,"  Mathematics, computer and information sciences",2064
+1568,    11. Computer and information sciences and support services,2065
+1569,    25. Library science,2066
+1570,    27. Mathematics and statistics,2067
+1571,"    30D Interdisciplinary mathematics, computer and information sciences",2068
+1572,"  Architecture, engineering, and related trades",2069
+1573,    04. Architecture and related services,2070
+1574,    14. Engineering,2071
+1575,    15. Engineering/engineering-related technologies/technicians,2072
+1576,    30.12 Historic preservation and conservation,2073
+1577,    46. Construction trades,2074
+1578,    47. Mechanic and repair technologies/technicians,2075
+1579,    48. Precision production,2076
+1580,"  Agriculture, natural resources and conservation",2077
+1581,    01. Agricultural and veterinary sciences/services/operations and related fields,2078
+1582,    03. Natural resources and conservation,2079
+1583,  Health and related fields,2080
+1584,    30.37 Design for human health,2081
+1585,"    31. Parks, recreation, leisure, fitness, and kinesiology",2082
+1586,    51. Health professions and related programs,2083
+1587,    60. Health professions residency/fellowship programs,2084
+1588,    61. Medical residency/fellowship programs,2085
+1589,"  Personal, protective and transportation services",2086
+1590,"    12. Culinary, entertainment, and personal services",2087
+1591,"    28. Military science, leadership and operational art",2088
+1592,    29. Military technologies and applied sciences,2089
+1593,    43. Security and protective services,2090
+1594,    49. Transportation and materials moving,2091
+1595,  Other,2092
+1596,Total - Major field of study - Classification of Instructional Programs (CIP) 2021 for the population aged 25 to 64 years in private households - 25% sample data,2093
+1597,Total - Location of study compared with province or territory of residence for the population aged 25 to 64 years in private households - 25% sample data,2156
+1598,    Location of study inside Canada,2159
+1599,      Same as province or territory of residence,2160
+1600,      Different than province or territory of residence,2161
+1601,    Location of study outside Canada,2162
+1602,      Americas,2163
+1603,        United States of America,2164
+1604,        Mexico,2165
+1605,        Cuba,2166
+1606,        Haiti,2167
+1607,        Jamaica,2168
+1608,        Brazil,2169
+1609,        Colombia,2170
+1610,        Peru,2171
+1611,        Venezuela,2172
+1612,        Other locations of study in Americas,2173
+1613,      Europe,2174
+1614,        Belgium,2175
+1615,        France,2176
+1616,        Germany,2177
+1617,        Netherlands,2178
+1618,        Switzerland,2179
+1619,        Hungary,2180
+1620,        Moldova,2181
+1621,        Poland,2182
+1622,        Romania,2183
+1623,        Russian Federation,2184
+1624,        Ukraine,2185
+1625,        Ireland,2186
+1626,        United Kingdom,2187
+1627,        Bosnia and Herzegovina,2188
+1628,        Italy,2189
+1629,        Serbia,2190
+1630,        Other locations of study in Europe,2191
+1631,      Africa,2192
+1632,        Nigeria,2193
+1633,        Algeria,2194
+1634,        Morocco,2195
+1635,        Tunisia,2196
+1636,        Egypt,2197
+1637,"        South Africa, Republic of",2198
+1638,        Other locations of study in Africa,2199
+1639,      Asia,2200
+1640,        Iran,2201
+1641,        Iraq,2202
+1642,        Israel,2203
+1643,        Lebanon,2204
+1644,        Syria,2205
+1645,        Turkey,2206
+1646,        China,2207
+1647,        Taiwan,2208
+1648,        Hong Kong,2209
+1649,        Japan,2210
+1650,"        Korea, South",2211
+1651,        Philippines,2212
+1652,        Viet Nam,2213
+1653,        Bangladesh,2214
+1654,        Sri Lanka,2215
+1655,        India,2216
+1656,        Pakistan,2217
+1657,        Other locations of study in Asia,2218
+1658,      Oceania,2219
+1659,        Australia,2220
+1660,        New Zealand,2221
+1661,        Other locations of study in Oceania,2222
+1662,Total - Population aged 15 years and over by labour force status - 25% sample data,2223
+1663,  In the labour force,2224
+1664,    Employed,2225
+1665,    Unemployed,2226
+1666,  Not in the labour force,2227
+1667,Participation rate,2228
+1668,Employment rate,2229
+1669,Unemployment rate,2230
+1670,Total - Population aged 15 years and over by work activity during the reference year - 25% sample data,2231
+1671,  Did not work,2232
+1672,  Worked,2233
+1673,    Worked full year full time,2234
+1674,    Worked part year and/or part time,2235
+1675,    Average weeks worked in reference year,2236
+1676,Total - Labour force aged 15 years and over by class of worker including job permanency - 25% sample data,2237
+1677,  Class of worker - not applicable,2238
+1678,  All classes of workers,2239
+1679,    Employee,2240
+1680,      Permanent position,2241
+1681,      Temporary position,2242
+1682,        Fixed term (1 year or more),2243
+1683,"        Casual, seasonal or short-term position (less than 1 year)",2244
+1684,    Self-employed,2245
+1685,Total - Labour force aged 15 years and over by occupation - Broad category - National Occupational Classification (NOC) 2021 - 25% sample data,2246
+1686,  Occupation - not applicable,2247
+1687,  All occupations,2248
+1688,    0 Legislative and senior management occupations,2249
+1689,"    1 Business, finance and administration occupations",2250
+1690,    2 Natural and applied sciences and related occupations,2251
+1691,    3 Health occupations,2252
+1692,"    4 Occupations in education, law and social, community and government services",2253
+1693,"    5 Occupations in art, culture, recreation and sport",2254
+1694,    6 Sales and service occupations,2255
+1695,"    7 Trades, transport and equipment operators and related occupations",2256
+1696,"    8 Natural resources, agriculture and related production occupations",2257
+1697,    9 Occupations in manufacturing and utilities,2258
+1698,Total - Labour force aged 15 years and over by industry - Sectors - North American Industry Classification System (NAICS) 2017 - 25% sample data,2259
+1699,  Industry - not applicable,2260
+1700,  All industries,2261
+1701,"    11 Agriculture, forestry, fishing and hunting",2262
+1702,"    21 Mining, quarrying, and oil and gas extraction",2263
+1703,    22 Utilities,2264
+1704,    23 Construction,2265
+1705,    31-33 Manufacturing,2266
+1706,    41 Wholesale trade,2267
+1707,    44-45 Retail trade,2268
+1708,    48-49 Transportation and warehousing,2269
+1709,    51 Information and cultural industries,2270
+1710,    52 Finance and insurance,2271
+1711,    53 Real estate and rental and leasing,2272
+1712,"    54 Professional, scientific and technical services",2273
+1713,    55 Management of companies and enterprises,2274
+1714,"    56 Administrative and support, waste management and remediation services",2275
+1715,    61 Educational services,2276
+1716,    62 Health care and social assistance,2277
+1717,"    71 Arts, entertainment and recreation",2278
+1718,    72 Accommodation and food services,2279
+1719,    81 Other services (except public administration),2280
+1720,    91 Public administration,2281
+1721,"Total - All languages used at work for the population in private households aged 15 years and over who worked since January 1, 2020 - 25% sample data",2282
+1722,"Total - Language used most often at work for the population aged 15 years and over who worked since January 1, 2020, in private households, 2021 Census - 25% sample data",2293
+1723,"          Austro-Asiatic languages, n.i.e.",2413
+1724,"Total - Other language(s) used regularly at work for the population in private households aged 15 years and over who worked since January 1, 2020 - 25% sample data",2581
+1725,Total - Place of work status for the employed labour force aged 15 years and over - 25% sample data,2593
+1726,  Worked at home,2594
+1727,  Worked outside Canada,2595
+1728,  No fixed workplace address,2596
+1729,  Usual place of work,2597
+1730,Total - Commuting destination for the employed labour force aged 15 years and over with a usual place of work - 25% sample data,2598
+1731,  Commute within census subdivision (CSD) of residence,2599
+1732,  Commute to a different census subdivision (CSD) within census division (CD) of residence,2600
+1733,  Commute to a different census subdivision (CSD) and census division (CD) within province or territory of residence,2601
+1734,  Commute to a different province or territory,2602
+1735,Total - Main mode of commuting for the employed labour force aged 15 years and over with a usual place of work or no fixed workplace address - 25% sample data,2603
+1736,"  Car, truck or van",2604
+1737,"    Car, truck or van - as a driver",2605
+1738,"    Car, truck or van - as a passenger",2606
+1739,  Public transit,2607
+1740,  Walked,2608
+1741,  Bicycle,2609
+1742,  Other method,2610
+1743,Total - Commuting duration for the employed labour force aged 15 years and over with a usual place of work or no fixed workplace address - 25% sample data,2611
+1744,  Less than 15 minutes,2612
+1745,  15 to 29 minutes,2613
+1746,  30 to 44 minutes,2614
+1747,  45 to 59 minutes,2615
+1748,  60 minutes and over,2616
+1749,Total - Time leaving for work for the employed labour force aged 15 years and over with a usual place of work or no fixed workplace address - 25% sample data,2617
+1750,  Between 5 a.m. and 5:59 a.m.,2618
+1751,  Between 6 a.m. and 6:59 a.m.,2619
+1752,  Between 7 a.m. and 7:59 a.m.,2620
+1753,  Between 8 a.m. and 8:59 a.m.,2621
+1754,  Between 9 a.m. and 11:59 a.m.,2622
+1755,  Between 12 p.m. and 4:59 a.m.,2623
+1756,Total - Eligibility for instruction in the minority official language for the population in private households born in 2003 or later - 100% data,2624
+1757,  Children eligible for instruction in the minority official language,2625
+1758,  Children not eligible for instruction in the minority official language,2626
+1759,"Total - Eligibility and instruction in the minority official language, for the population in private households born between 2003 and 2015 (inclusive) - 100% data",2627
+1760,    Eligible children who have been instructed in the minority official language at the primary or secondary level in Canada,2629
+1761,    Eligible children who have not been instructed in the minority official language at the primary or secondary level in Canada,2630

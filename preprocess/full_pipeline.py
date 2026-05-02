@@ -12,7 +12,6 @@ import numpy as np
 
 def preprocess(contest_data_path, provinces=['Quebec']):
 
-    Path("GIS_work/data/Contest Data").mkdir(parents=True, exist_ok=True)
     Path("GIS_work/data/DA Data").mkdir(parents=True, exist_ok=True)
     
     if is_empty_folder("GIS_work/data/Contest Data") or is_empty_folder("GIS_work/data/DA Data"):
@@ -30,16 +29,16 @@ def preprocess(contest_data_path, provinces=['Quebec']):
     assert np.all([p in PR_TO_ID_MAP for p in provinces]), "Unsupported provinces - check constants.py"
     
     for pr in provinces:
-        assert Path(f'GIS_work/data/DA Data/{pr}')
+        assert Path(f'GIS_work/data/DA Data/{pr}'), "You're missing the folder for this province - any chance you forgot to download the data?"
         
-        
+        print(f'Loading all census data for {pr}. This may take a few minutes...')
         filter_for_coi(pr)
         pivot_census(pr)
         map_das_to_csds(pr)
         
         
 if __name__ == '__main__':
-    preprocess('GIS_work\data\Contest Data\Cleaned_Mtl_Data.csv')
+    preprocess('GIS_work\data\Contest Data')
     
     
     
