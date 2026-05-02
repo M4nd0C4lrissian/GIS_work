@@ -5,12 +5,50 @@ So, flow to try:
 - (DONE) with this set of polygons (might have to make them a multipolygon), we look for their public transit and subway stations
 - (DONE) we place them all on a map using (just used matplotlib and geopandas)
 - (DONE) visualize, with coloring tools for metadata (we want to be able to see %renter-owned in a color, or average income, etc)
+- (DONE) make visualizer into general function - test that it works for multipolygon
+- (DONE) write clearer README, underlining what each library is used for, note on CRS details, and on how we usee features
+- (DONE) showing where to find features and some example scripts that generate some example graphs
 
 Eamon TODO:
 
-- (DONE) make visualizer into general function - test that it works for multipolygon
-- write clearer README, underlining what each library is used for, note on CRS details, and on how we usee features
-- showing where to find features and some example scripts that generate some example graphs
+(DONE) 0. split the data they've provided us (adding province feature as well)
+(DONE) 0.1 inspect huge csvs
+(DONE) Filter them to the attributes we want
+
+DATA_QUALITY_FLAG - check if it is non-zero
+C1_COUNT_TOTAL is the actual value
+
+Clean data (check flags for data quality)
+    - plus making sure that there is an entry for all DAs and for each parameter we care about 
+    - I'd like to merge all these values along the ALT_GEO_CODE, which means I just need to identify where the actual values are stored (can compare with online display)
+    - i.e. ideally we can have table where one row shows all the information of interest along the columns
+
+So, the flow of interest - 
+
+CSD from Contest Data -> Fetch all DAs in that CSD using Geographic Attribute File -> for each DA, fetch its characteristics from the pre-processed table
+-> figure out how to plot them
+
+1. Use the Geographic Attribute File to find all of the DAs present (and their IDs) in that CSD (and other data that is relevant i.e. 
+
+DARPLAT_ADLAT, DARPLONG_ADLONG, DARPLAMX_ADLAMX, DARPLAMY_ADLAMY
+
+2. Use the DBUID_IDIDU to query the higher-resolution DA data (extract %immigrants) - may find more information in the future
+Have some generally interesting information - https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?LANG=E&GENDERlist=1&STATISTIClist=1&DGUIDlist=2021S051224662285&HEADERlist=,49,51,50,48,52,,28,24,22,27,23,29,25,26,10,11,,42,44,40,43,41,1,3&SearchText=24662285
+2.1 save this for future Use
+
+(This and the above all need to have CSD_UID features that we join with the initial data they gace us)
+
+3. add plotting logic to overlay it onto the larger CSD data
+    - we have the lat and long and area, so we can build sort of heatmaps out of centroids around each DA
+
+4. functionalize everything to pre-processing and then post-processing (plotting over whatever details we want)
+
+5. make short write up outlining how it works
+
+
+ADD CONSTANTS FOR ROUTING TO DATA FILES (easily modifiable)
+
+Later:
 
 - Adding save feature to API call (osmnx may have that built in)
 - that means we also want functionality to merge multiple separate gdfs from different queries (and perhaps some standard way to name / save these files for clarity)
