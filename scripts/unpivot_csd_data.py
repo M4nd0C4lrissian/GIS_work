@@ -9,7 +9,7 @@ file_path = "data/Mtl_Tor_Edm_Van_CSDs_Natasha.csv"
 # 1. READ ONCE & ENFORCE SCHEMA
 # ---------------------------------------------------------
 tenures = ['Both', 'Owner', 'Renter']
-metrics = ['population', 'income', 'stir']
+metrics = ['population', 'avg_income', 'avg_stir']
 
 # Generates: ['geography', 'immigrant_status', 'Total_population', 'Total_income', ...]
 col_names = ['geography', 'immigrant_status'] + [
@@ -78,20 +78,20 @@ print(f"\nFirst 5 rows:\n{df_unpivoted.head(5).to_string()}")
 print(f"\nUnique cities: {df_unpivoted['city'].nunique()}")
 print(f"Unique subdivisions: {df_unpivoted['subdivision'].nunique()}")
 
-with ddb.connect("data/csd_housing.duckdb") as con:
-    con.execute("DROP TABLE IF EXISTS csd_housing_unpivoted")
-    con.execute("CREATE TABLE csd_housing_unpivoted AS SELECT * FROM df_unpivoted")
+with ddb.connect("data/migration_datasets.duckdb") as con:
+    con.execute("DROP TABLE IF EXISTS csd_housing")
+    con.execute("CREATE TABLE csd_housing AS SELECT * FROM df_unpivoted")
     
-    row_count = con.execute("SELECT COUNT(*) FROM csd_housing_unpivoted").fetchone()[0]
-    print(f"\nSaved to DuckDB: {row_count} rows in csd_housing_unpivoted table")
+    row_count = con.execute("SELECT COUNT(*) FROM csd_housing").fetchone()[0]
+    print(f"\nSaved to DuckDB: {row_count} rows in csd_housing table")
     
     print(f"\nSample by tenure:")
     sample = con.execute("""
         SELECT tenure, COUNT(*) as count
-        FROM csd_housing_unpivoted 
+        FROM csd_housing 
         GROUP BY tenure
         ORDER BY tenure
     """).fetchdf()
     print(sample.to_string(index=False))
 
-print("\nDone! File saved to: data/csd_housing.duckdb")
+print("\nDone! File saved to: data/migration_datasets.duckdb")
