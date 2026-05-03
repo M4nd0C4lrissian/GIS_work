@@ -3,3 +3,4 @@ data/*
 graphs/*
 *.pyc
 util/constants.py
+!data/.gitkeep
