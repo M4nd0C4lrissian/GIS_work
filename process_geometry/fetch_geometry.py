@@ -7,7 +7,7 @@ import numpy as np
 #   NOTE - this is an AND over ORs
 # returns a GeoDataFrame (I think) including all of the features outlined in README.md
 
-def reformat_csd(gdf):
+def reformat_crs(gdf):
     assert gdf.crs is not None
     return gpd.GeoDataFrame(gdf, crs=gdf.crs).to_crs("EPSG:4326")
 
@@ -23,7 +23,7 @@ def and_over_or(filepath, feature_dict):
         per_key_masks.append(np.logical_or.reduce(value_masks))
 
     final_mask = np.logical_and.reduce(per_key_masks)
-    return reformat_csd(gdf.loc[final_mask])
+    return reformat_crs(gdf.loc[final_mask])
 
 #NOTE - untested
 #same as above, except only one out of any of the listed conditions need to be true
@@ -39,7 +39,7 @@ def logical_or(filepath, feature_dict):
         per_key_masks.append(np.logical_or.reduce(value_masks))
 
     final_mask = np.logical_or.reduce(per_key_masks)
-    return reformat_csd(gdf.loc[final_mask])
+    return reformat_crs(gdf.loc[final_mask])
 
 if __name__ == '__main__':
     #translation: a city OR a town that is in either Ontario or Quebec

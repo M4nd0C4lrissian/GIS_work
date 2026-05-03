@@ -1,4 +1,4 @@
-from csd_geometry.fetch_csd import and_over_or
+from process_geometry.fetch_geometry import and_over_or
 from plotting.plotting_overpass_features import plot_features_over_geometry
 
 import geopandas as gpd
