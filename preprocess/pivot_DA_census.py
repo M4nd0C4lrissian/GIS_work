@@ -84,9 +84,9 @@ def pivot_census(pr: str) -> None:
     if unique_chars != len(COI):
         print(f"Note: found {unique_chars} unique CHARACTERISTIC_NAME values (expected {len(COI)}).")
  
-    print('NaN values per column.')
-    print(pivoted.isnull().sum())
+    # print('NaN values per column.')
+    # print(pivoted.isnull().sum())
  
-    pivoted.dropna(inplace=True)
+    # pivoted.dropna(inplace=True)
     pivoted.to_csv(f'GIS_work\data\DA Data\{pr}\{pr}_DA_pivoted.csv', index=False)
     print(f"Done. Output: 'GIS_work\data\DA Data\{pr}\{pr}_DA_pivoted.csv'  ({len(pivoted)} rows + {len(pivoted.columns)} columns)")

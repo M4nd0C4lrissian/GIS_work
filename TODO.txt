@@ -57,3 +57,21 @@ Later:
 
 - could be cool if there were political (like MP leaning?) for every region info 
     - or whatever the provincial equivalent of an MP is (I'm uneducated)
+
+
+NOTE: rows with even one NaN being pruned out to early (they can make it to plotting)
+
+Observations (Montreal):
+
+- immigrants are highly centralized in the city center, where commuting via public transit is the main method
+- however, it seems that the city centre is the place with the highest concentration of empty housing
+    - a sign of poor affordability
+    - or perhaps this is the only place with empty rental units, so immigrants are forced to come here?
+- public transit is only relied on by those who live in the city centre
+- outside of the city centre, the population are more wholy commuters than inside the city centre (more work from home people inside city centre)
+- everybody outside city centre drives
+- despite being in the city centre, it seems that residents here still commute for just as long as those outside of the city centre
+
+MAYBE:
+- notably, we see that it is the downtown housing that is sitting empty!
+- the rental areas 

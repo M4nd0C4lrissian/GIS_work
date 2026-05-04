@@ -81,7 +81,9 @@ def plot_features_over_geometry(gdf, features, feature_keys, save_filepath=None,
     else:
         plt.show()
         
-def plot_polygons(gdf, color_val, title, save_filepath=None):
+    plt.close()
+        
+def plot_polygons(gdf, color_val, title, save_filepath=None, continue_plot=False):
     # Use a copy so we don't mutate the original
     color_val = color_val.copy().astype(float)
 
@@ -89,16 +91,16 @@ def plot_polygons(gdf, color_val, title, save_filepath=None):
     color_val[color_val < 0] = np.nan
 
     # Choose your colormap here — change to any plt.cm.* you like
-    cmap = truncate_cmap(plt.cm.Reds, minval=0.0, maxval=0.8)
+    cmap = truncate_cmap(plt.cm.Reds, minval=0.0, maxval=1)
     cmap = cmap.with_extremes(bad='grey')  # NaN polygons → grey
 
     # # TODO: make norm an argument
-    # norm = mcolors.Normalize(
-    #     vmin=np.nanmin(color_val),
-    #     vmax=np.nanmax(color_val)
-    # )
+    norm = mcolors.Normalize(
+        vmin=np.nanmin(color_val),
+        vmax=np.nanmax(color_val)
+    )
     
-    norm = mcolors.PowerNorm(gamma=2, vmin=np.nanmin(color_val), vmax=np.nanmax(color_val))
+    # norm = mcolors.PowerNorm(gamma=2, vmin=np.nanmin(color_val), vmax=np.nanmax(color_val))
 
     fig, ax = plt.subplots(figsize=(10, 10))
     ax.set_title(title, fontsize=16, pad=15)
@@ -130,8 +132,37 @@ def plot_polygons(gdf, color_val, title, save_filepath=None):
 
     if save_filepath:
         plt.savefig(save_filepath, bbox_inches='tight')
-    else:
-        plt.show()
+    # else:
+    #     plt.show()
+        
+    if not continue_plot:
+        plt.close()
+        
+    return fig, ax
+    
+def simple_plot_polygons(gdf, title=None,  fig=None, ax=None, save_filepath=None):
+
+    if fig is None and ax is None:
+        fig, ax = plt.subplots(figsize=(10, 10))
+    
+        ax.set_title(title, fontsize=16, pad=15)
+        ax.set_xticks([])
+        ax.set_yticks([])
+
+    gdf.plot(
+        ax=ax,
+        color='greenyellow',
+        linewidth=0.8,
+        edgecolor='black',
+        alpha=0.1
+    )
+
+    if save_filepath:
+        plt.savefig(save_filepath, bbox_inches='tight')
+    # else:
+    #     plt.show()
+        
+    plt.close()
         
 
 from matplotlib.colors import LinearSegmentedColormap

@@ -10,7 +10,7 @@ import numpy as np
 
 #USAGE notes - 
 
-def preprocess(contest_data_path, provinces=['Quebec']):
+def preprocess(contest_data_path, provinces=['BritishColumbia', 'Quebec', 'Ontario', 'Alberta']):
 
     Path("GIS_work/data/DA Data").mkdir(parents=True, exist_ok=True)
     
