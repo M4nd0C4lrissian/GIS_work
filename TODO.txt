@@ -72,6 +72,77 @@ Observations (Montreal):
 - everybody outside city centre drives
 - despite being in the city centre, it seems that residents here still commute for just as long as those outside of the city centre
 
-MAYBE:
-- notably, we see that it is the downtown housing that is sitting empty!
-- the rental areas 
+
+Ontario:
+
+- notable gap of immigrant population in the downtown core of Toronto - compared to other areas (Montreal, Vancouver, Alberta), immigrant populace is more spread into further regions (Mississauga, Scarborough) 
+- immigrants spending proportionally more of their income for worse housing conditions (Morganna) farther from the core of the city - despite the highest concentration of rental properties being within Toronto proper
+- it seems that everybody outside of Toronto is commuting to Toronto 
+- they are forced to rely on cars (considerably more expensive than transit) - so even more of their income is going into essential services (housing and transportation)
+- also, Toronto proper has the highest amount of work-from-home people (so those who benefit least from transit options (for work) have them at their disposal)
+
+- despite all these downsides to living outside of Toronto proper, the median shelter costs do not reflect this (outside of Toronto proper prices seem the same if not worse)
+- its not like an immigrant can simply move closer into Toronto and pay the same prices - the availabality of housing across the board is very little
+
+this paints a picture of a region where newly-landed immigrants are immediately disadvantaged, as their main options for settling require further travel and expense, often for worse conditions
+
+
+RECONSTRUCTING HOUSING HARDSHIP AT CSD-Level
+
+we have access to STIR, and total income, can reconstruct housing costs from this. (At CSD level)
+Can find average cost of owning and operating a vehicle and food
+
+(HERE) median car costs per month - subtract
+
+NEED: average household size (to account for grocery prices)
+average number of vehicles
+
+(might have to make assumptions here) HINGES ON finding average grocery prices ideally at CSD or near-CSD level
+
+Fallback: can make some assumptions
+
+Questions:
+
+- verify reasoning for some features being assumed / averaged / a little fuzzy
+- is it helpful to have visualizations that can show DA-level patterns (if we focus on Toronto / GTA)
+
+
+start with renter v owner and basic STIR for immigrants vs non-immigrants data
++ quality of housing in Toronto proper (Morganna's data)
+
+policy recommendation summary in intro 
+
+2.2 Measurement (document uncertainty here - 25% sample in census), and probably others
+
+2.3 Visualize variables (discuss interesting patterns)
+
+2.4 move into improved housing hardship model (and assumptions)
+
+2.5 here is what it looks like
+
+2.6 then discuss policy (here is where we can really bring the two together for discussion 
+(simple graphs + hardship modelling))
+
+
+ASSUMPTIONS TO CHECK:
+
+- higher proportion of immigrant renters (this holds) 45% to 39% (in Toronto City), 30% to 27% outside of Toronto
+
+- AND we have a higher immigrant population than non-immigrant 
+
+
+TODO:
+
+Oliver:
+- promising housing hardship metric based on estimated food costs and transit costs 
+- looking for good estimates of car cost / grocery cost
+- compute leftover income post-housing (subtract median yearly cost to own a car proportional to the percent of drivers in an area)
+
+
+Eamon:
+- Write outline of current narrative implied by current graphs 
+- figure out how best way to get CSD-level car users (either conglomeration or downloading CSD census data)
+- CSD-level average household size for grocery costs 
+try both:
+- one where we bubble everything to CSD level (downside is generalization, but all at the same level)
+- take CSD-level LI, associate that with all internal DAs, use other info at DA level

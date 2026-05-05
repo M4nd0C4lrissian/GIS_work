@@ -48,7 +48,11 @@ def plot_da_data(pr):
     color = result['  Median monthly shelter costs for owned dwellings ($)']
     fig, ax = plot_polygons(result, color, title='Median monthly shelter costs', continue_plot=True)
     simple_plot_polygons(to_plot, fig=fig, ax=ax, save_filepath=f'GIS_work\graphs\\{pr}\\{pr}_median_shelter_costs.png')
-
+    
+    color = result['  Major repairs needed'] / (result['  Only regular maintenance and minor repairs needed'] + result['  Major repairs needed'])
+    fig, ax = plot_polygons(result, color, title='Percent Dwellings in Need of Major Repairs', continue_plot=True)
+    simple_plot_polygons(to_plot, fig=fig, ax=ax, save_filepath=f'GIS_work\graphs\\{pr}\\{pr}_percent_repair.png')
+    
     #UNEMPLOYMENT
 
     color = result['Unemployment rate'] / 100
@@ -85,6 +89,6 @@ def plot_da_data(pr):
 
 if __name__ == '__main__':
     
-    # plot_da_data('Quebec')
-    for pr in ['BritishColumbia', 'Quebec', 'Ontario', 'Alberta']:
-        plot_da_data(pr)
+    plot_da_data('Ontario')
+    # for pr in ['BritishColumbia', 'Quebec', 'Ontario', 'Alberta']:
+    #     plot_da_data(pr)
