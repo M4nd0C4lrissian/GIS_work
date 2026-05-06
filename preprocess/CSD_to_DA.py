@@ -22,7 +22,7 @@ def map_das_to_csds(pr : str) -> None:
     #geographic_attribute_file
     gaf = pd.read_csv('GIS_work\data\\2021_geographic_attribute_file.csv', encoding='latin-1', low_memory=False)
 
-    # we want all of the DAs present in the CSDs in our 
+    # we want all of the DAs present in the CSDs in our contest data
     pr_csd_ids = pr_contest_data['CSD_UID'].unique()
     filtered_gaf = gaf[gaf['CSDUID_SDRIDU'].isin(pr_csd_ids)]
 
