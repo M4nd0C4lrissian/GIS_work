@@ -3,6 +3,7 @@ import matplotlib.colors as mcolors
 import matplotlib.patches as mpatches
 import math
 import numpy as np
+import pandas as pd
 
 #Input
 #   gdf : the polygons to plot
@@ -83,33 +84,52 @@ def plot_features_over_geometry(gdf, features, feature_keys, save_filepath=None,
         
     plt.close()
         
-def plot_polygons(gdf, color_val, title, save_filepath=None, continue_plot=False):
+def plot_polygons(gdf, color_val, title=None, save_filepath=None, fig=None, ax=None, c_bar=True, continue_plot=False, alt_color_condition=None, percent_flag=True, vmin=None, vmax=None, allow_neg=False):
     # Use a copy so we don't mutate the original
     color_val = color_val.copy().astype(float)
 
     # Mark missing/invalid values as NaN so cmap renders them as "bad" (grey)
-    color_val[color_val < 0] = np.nan
+    if not allow_neg:
+        color_val[color_val < 0] = np.nan
 
     # Choose your colormap here — change to any plt.cm.* you like
-    cmap = truncate_cmap(plt.cm.Reds, minval=0.0, maxval=1)
-    cmap = cmap.with_extremes(bad='grey')  # NaN polygons → grey
-
-    # # TODO: make norm an argument
-    norm = mcolors.Normalize(
-        vmin=np.nanmin(color_val),
-        vmax=np.nanmax(color_val)
-    )
+    cmap2 = truncate_cmap(plt.cm.Greens, minval=0.0, maxval=1)
+    cmap2 = cmap2.with_extremes(bad='grey')  # NaN polygons → grey
+    
+    if allow_neg:
+        cmap = plt.cm.RdBu
+        cmap = cmap.with_extremes(bad='grey')
+        norm = mcolors.TwoSlopeNorm(
+            vmin=vmin if vmin is not None else np.nanmin(color_val),
+            vcenter=0,
+            vmax=vmax if vmax is not None else np.nanmax(color_val)
+        )
+    else:
+        cmap = truncate_cmap(plt.cm.Reds, minval=0.0, maxval=1)
+        cmap = cmap.with_extremes(bad='grey')
+        norm = mcolors.Normalize(
+            vmin=vmin if vmin is not None else np.nanmin(color_val),
+            vmax=vmax if vmax is not None else np.nanmax(color_val)
+        )
     
     # norm = mcolors.PowerNorm(gamma=2, vmin=np.nanmin(color_val), vmax=np.nanmax(color_val))
 
-    fig, ax = plt.subplots(figsize=(10, 10))
-    ax.set_title(title, fontsize=16, pad=15)
-    ax.set_xticks([])
-    ax.set_yticks([])
+    if fig is None or ax is None:
+        fig, ax = plt.subplots(figsize=(10, 10))
+        if title:
+            ax.set_title(title, fontsize=16, pad=15)
+        ax.set_xticks([])
+        ax.set_yticks([])
+    
+        # Split into normal and alt-color rows
+    if alt_color_condition is not None:
+        alt_mask = gdf[alt_color_condition] == True
+    else:
+        alt_mask = pd.Series(False, index=gdf.index)
 
-    gdf.plot(
+    gdf[~alt_mask].plot(
         ax=ax,
-        column=color_val,   # pass values directly; geopandas handles NaN → bad color
+        column=color_val[~alt_mask],   # pass values directly; geopandas handles NaN → bad color
         cmap=cmap,
         norm=norm,
         linewidth=0.5,
@@ -117,18 +137,37 @@ def plot_polygons(gdf, color_val, title, save_filepath=None, continue_plot=False
         edgecolor='none',
         missing_kwds={"color": "grey"},  # belt-and-suspenders for truly missing rows
     )
+    
+    
+    if alt_mask.any():
+        gdf[alt_mask].plot(
+            ax=ax,
+            column=color_val[alt_mask],
+            norm=norm,
+            cmap=cmap2,
+            linewidth=0.5,
+            edgecolor='none',
+            missing_kwds={"color": "grey"}
+        )
 
-    # Manually build a ScalarMappable for the colorbar
-    sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
-    sm.set_array([])
-
-    cbar = fig.colorbar(sm, ax=ax, fraction=0.03, pad=0.04)
+    if c_bar:
+        # Manually build a ScalarMappable for the colorbar
+        sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
+        sm.set_array([])
+        cbar = fig.colorbar(sm, ax=ax, fraction=0.03, pad=0.04)
     # cbar.set_label(percent_metric, fontsize=12)
 
     # Format colorbar ticks as percentages
-    cbar.ax.yaxis.set_major_formatter(
-        plt.FuncFormatter(lambda x, _: f"{x * 100:.0f}%")
-    )
+        
+        if percent_flag:
+            cbar.ax.yaxis.set_major_formatter(
+                plt.FuncFormatter(lambda x, _: f"{x * 100:.0f}%")
+            )
+        else:
+            cbar.ax.yaxis.set_major_formatter(
+                plt.FuncFormatter(lambda x, _: f"{x:.0f}")
+            )
+
 
     if save_filepath:
         plt.savefig(save_filepath, bbox_inches='tight')
@@ -140,7 +179,7 @@ def plot_polygons(gdf, color_val, title, save_filepath=None, continue_plot=False
         
     return fig, ax
     
-def simple_plot_polygons(gdf, title=None,  fig=None, ax=None, save_filepath=None):
+def simple_plot_polygons(gdf, title=None,  fig=None, ax=None, save_filepath=None, continue_plot=False):
 
     if fig is None and ax is None:
         fig, ax = plt.subplots(figsize=(10, 10))
@@ -161,8 +200,8 @@ def simple_plot_polygons(gdf, title=None,  fig=None, ax=None, save_filepath=None
         plt.savefig(save_filepath, bbox_inches='tight')
     # else:
     #     plt.show()
-        
-    plt.close()
+    if not continue_plot:
+        plt.close()
         
 
 from matplotlib.colors import LinearSegmentedColormap

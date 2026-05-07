@@ -140,9 +140,84 @@ Oliver:
 
 
 Eamon:
-- Write outline of current narrative implied by current graphs 
 - figure out how best way to get CSD-level car users (either conglomeration or downloading CSD census data)
-- CSD-level average household size for grocery costs 
-try both:
-- one where we bubble everything to CSD level (downside is generalization, but all at the same level)
-- take CSD-level LI, associate that with all internal DAs, use other info at DA level
+    - Going to use flat average car ownership costs per household and just leave it at that
+    - same with grocery costs
+
+- TWO MAIN THINGS: (both of these things can be done with the data that Oliver gave)
+    - add different color for CSDs with primarily renters (for showing immigrants)
+    - plot new DA value, where we take CSD-level left-over income after housing for both immigrants and non-immigrants (in every region, we subtract according to their probability of driving / commuting)
+        - we can plot the amount difference between average immigrant vs average non-immigrant
+        - this assumes relative independence between probability of being an immigrant and probability of driving, conditioned on the region, which we think is reasonable as driving to work is mostly conditioned on the location of residence
+
+- lesser thing - beautifying plots
+    - one idea: a sort of "magnifying glass" on the immediate area surrounding Toronto proper
+    - zooming in in general, making the plots bigger
+    - adding transit info to the transit-oriented plots
+
+- policy: important to note - this issue affects non-immigrants in these areas too (have to have a basis with which to convince anyone)
+
+Notes from meeting with Vaidehi:
+
+- we need more descriptive statistics as a baseline to better establish the relationship between renting and immigration, perhaps at different quantiles of income
+    - correlation / scatter plot 
+
+- concise, straight to the point - use colors and focus in on certain regions in the map to make what you're saying self-evident
+- on immigrant density map, do regions with a certain threshold of renters (CSD-level) in a different color to better show that focusing on renting makes sense
+
+- to further expand the WHY NOT? of the reason that immigrants are less prevalent in the Toronto core, we can point to accessibility issues related to a lack of credit 
+that bars access to the rental market in the downtown core (their luck is perhaps better with landlords in immigrant-dense areas)
+    - this can be a part of our policy recommendations as well
+
+- it is reasonable to use general grocery costs and car costs (which should also be mapped) - or perhaps it doesn't need to be, and we can simply use descriptive statistics, where our model is informed by the map / % car drivers
+
+
+My new TODO:
+
+- (DONE) get average commuter cost inside of Toronto vs outside
+- plot timeseries average immigrant income with and without this commute cost (relative to some notion of cost of living changes over time)
+- beautify the current maps a bit (and perhaps stack extra info in nicer ways)
+
+Clarify:
+
+- most renters live in Toronto proper (let's confirm that)
+- this is also where most rental properties are
+- a majority of renters are immigrants
+- yet, immigrants make up a higher proportion of the renter market in regions just ouside of Toronto than they do inside of Toronto 
+- Why is that? - we have more of a theoretical explanation - as costs alone don't seem to address it, and how does renting outside of Toronto affect the lived experiences of immigrants and non-immigrants?
+    - this is where we get into transit information and then use that to calculate expected leftover income per region 
+        - so that's the final shabang we're looking at
+
+
+#ASSUMPTION: 
+
+- not considering long-term equity accrued on home ownership (should we be?) and how this increases net income (not sure if that's included in income calculations)
+    - not if we focus on the immigrant renter experience in these particular regions
+
+According to: https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3610022501&pickMembers%5B0%5D=1.7&pickMembers%5B1%5D=2.1&cubeTimeFrame.startYear=2020&cubeTimeFrame.endYear=2024&referencePeriods=20200101%2C20240101
+
+Food in Ontario cost the average resident 45,457.4 per year - this is per household (average household size is 2.6), so average food cost per person in Ontario is 
+Clothing and footwear - 17,131.6
+
+The Ontarian transportation average is kind of too detailed (not sure what values to consider)
+I actually think the Canadian-level averages are cleaner to use in this case (https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110022201) and this is 2021 data
+
+Annual cost of private transportation - 11,258
+Public transportation - 1,479
+Food - 8,065
+
+
+Ya, I'm gonna work with the national data.
+
+Ontario is so expensive!
+
+Average cost of driving: (this is all in 2021)
+
+New passenger cars (for some reason cheaper than average used vehicles) - 4,687.0	
+Maintenance and repair of vehicles - 4,734.8
+Parking - 1,150.6
+Gas - 130.2 cents per litre - can't find a fixed value, can conservatively estimate about 1500 / year
+
+Comes to about 12,072.4 (just a bit above the national average)
+
+
