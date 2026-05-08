@@ -175,8 +175,63 @@ that bars access to the rental market in the downtown core (their luck is perhap
 My new TODO:
 
 - (DONE) get average commuter cost inside of Toronto vs outside
-- plot timeseries average immigrant income with and without this commute cost (relative to some notion of cost of living changes over time)
+- (DONE) plot timeseries average immigrant income with and without this commute cost (relative to some notion of cost of living changes over time)
 - beautify the current maps a bit (and perhaps stack extra info in nicer ways)
+    - Area with greater than 75% of immigrant renter density can be highlighted just on its border
+    - Transit nodes can and should be put onto the map
+    - better color gradient
+    - place some plots next to one another into a single image?
+
+############################################## MOST UPDATED #######################
+
+Positioning: 
+
+Intro: establish that immigrants take up majority of rental market, look at their concentration
+
+Research question: If immigrants make up a majority of the rental market, and Toronto has by far the highest concentration of rental properties, why is it that immigrant populations cluster 
+around Toronto proper, and not as much inside? And what are the effects of this.
+
+First, we should note that the title of 'immigrant' is a wide net.
+
+There are some immigrants who come on work visas, with specific economic intent and who have already been earning a high wage in their professional lives. They exhibit employment income 
+even above the Canadian median.
+
+As we see from timeseries data, there are many whose economic growth is only barely outpacing the poverty line
+
+- we don't have to just talk about refugees 
+- even immigrants sponsored by family and dependents are barely making enough to pay for their personal baseline expense (even after 10 years of work, when we would hope and expect people to have the means
+    to gain independence, the poverty line (MBM) is very quickly approaching)
+
+They cannot engage with investments, they cannot afford additional programs for enrichment or education.
+This means that for some immigrants, the promise of starting a better life for their children is out of reach.
+These accessibility issues compound, and lead to low growth in income when compared to the growth in MBM, even over long timeframes. 
+
+*So, after establishing the economic truths of some immigrant groups, we can consider that these groups are forced to rent, and cannot reasonably afford Toronto rent.
+This, is what pushes them into the surrounding areas of the GTA.
+
+Unfortunately, lower cost in renting brings with it a large opportunity cost through a lack of access to various services, in particular, transportation.
+lower living costs, but higher proportion of income going towards housing
+    - higher rent for higher opportunity cost is clearly wrong
+
+- use MBM to identify where costs are increasing
+
+
+Establish transportation dynamics via the maps to show that we are missing accessibility, relative to where immigrants are centred
+
+The % commuters who leave their CSD is really telling - it also underlines that there are a lot of car commuters in Toronto who could use public transit, but CHOOSE to pay for a personal vehicle
+Meanwhile, there is little choice for many regions outside of Toronto proper (and the difference means 15000 annually for a car)
+
+- the inability for these low-income immigrants to reasonably afford Toronto upon entering the country pushes them out into the GTA, where they are expected to either:
+    - 1. have considerably less access to high-pay work due to lack of proximity to the city 
+    - 2. pay considerably more than those in the city in both time and money in order to commute to the city for work
+
+Discuss how this additional accessibility issue further compounds the disparities and slow growth of income observed.
+
+This leads into policy change: increased transit to these surrounding GTA regions. While being constructed, these specific DAs should observe rent caps to account for the increased cost of transporation to access
+necessary services and the competitivve job markets
+
+
+###########################################################
 
 Clarify:
 
