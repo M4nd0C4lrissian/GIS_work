@@ -29,9 +29,19 @@ df = pd.concat([df[~pa_mask], pf], ignore_index=True)
 df = df[df['Unnamed: 0'] != 'All immigrants']
 df = df.reset_index(drop=True)
 
+
+# Add Canadian median BEFORE deriving years/labels
+canadian_median_values = [41100, 41700, 42300, 42300, 41900, 42100, 42900, 43700, 42400, 45000]
+canadian_median_row = {'Unnamed: 0': 'Canadian Median'}
+for col, val in zip(df.columns[1:], canadian_median_values):
+    canadian_median_row[col] = val  # use df's actual column keys (strings)
+
+canadian_median_df = pd.DataFrame([canadian_median_row])
+df = pd.concat([df, canadian_median_df], ignore_index=True)  # ← actually concat into df
+
+
 years = [int(c) for c in df.columns[1:]]
 labels = df['Unnamed: 0'].tolist()
-
 additional_years = [int(c) for c in additional.columns[1:]]  # [2020, 2021]
 additional_labels = additional['Unnamed: 0'].tolist()
 
@@ -47,8 +57,8 @@ for i, row in additional.iterrows():
     ax.axhline(y=y_val, linestyle='--', color=color, alpha=0.7, linewidth=2,
                label=f"MBM {additional_labels[i]} (2021)")
 
-#Canadian median at that time: 45380
-ax.axhline(y=45380 / 1000, linestyle='--', color='grey', linewidth=4, label='Canadian Median Income')
+# #Canadian median at that time: 45380
+# ax.axhline(y=45380 / 1000, linestyle='--', color='grey', linewidth=4, label='Canadian Median Income')
 
 ax.set_xlabel('Year')
 ax.set_ylabel('Income (CAD $000s)')

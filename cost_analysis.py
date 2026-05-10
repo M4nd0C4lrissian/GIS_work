@@ -40,8 +40,9 @@ def analysis(pr):
         how='left'
     )
     
+    #(Pre-pandemic)
     GROCERY_COST = 8_065
-    PRIVATE_TRANS = 16_476 #according to bloomberg
+    PRIVATE_TRANS = 11_258 #according to bloomberg
     PUBLIC_TRANS = 1_479
     
     #avg commute cost inside and outside of Toronto proper
@@ -84,9 +85,9 @@ def analysis(pr):
     
         compare_transiters(csd_ids, result, cost_type, population_type)
         
-        print('--------------')
-        print(f'Percents: {other_pops[i]}')
-        compare_transiters(csd_ids, result, other_pops[i] , pops[i])
+        # print('--------------')
+        # print(f'Percents: {other_pops[i]}')
+        # compare_transiters(csd_ids, result, other_pops[i] , pops[i])
     
 def compare_transiters(ids, df, cost_type, population_type):
     csd_ids = ids[ids != 3520005]

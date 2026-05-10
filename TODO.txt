@@ -182,6 +182,17 @@ My new TODO:
     - better color gradient
     - place some plots next to one another into a single image?
 
+
+K things are written, now just graph beautification:
+
+- 1. better color scheme (blues and yellows is good)
+- 2. immigrant pop distribution should have > 75% CSDs outlined in some special color
+- 3. immigrant pop distribution should have a zoom-in on toronto proper
+- 4. immigrant pop distribution should have at least subway loop
+- 5. CSD transit graph should have transit nodes
+- 6. fix timeseries legends to make them more slim 
+
+
 ############################################## MOST UPDATED #######################
 
 Positioning: 
